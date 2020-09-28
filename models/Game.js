@@ -4,7 +4,11 @@ const Schema = mongoose.Schema;
 const gameSchema = new Schema({
   rawgid: Number,
   title: String,
-  image: String,
+  image: {
+    type: String,
+    default:
+      "https://www.ipsgroup.fr/wp-content/uploads/2013/12/default_image_01.png",
+  },
   metacritic: Number,
   genre: {
     type: String,
