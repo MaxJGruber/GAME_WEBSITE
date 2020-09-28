@@ -38,6 +38,11 @@ app.use(
     })
 );
 
+// Middleware to require
+app.use(require("./middleware/protectAdminRoute")) // Issue with this one on page load
+app.use(require("./middleware/protectUserRoute"))
+
+
 
 app.use("/", indexRouter);
 app.use(usersRouter);
@@ -47,6 +52,8 @@ app.use(usersRouter);
 app.use(function(req, res, next) {
     next(createError(404));
 });
+
+
 
 // error handler
 app.use(function(err, req, res, next) {

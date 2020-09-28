@@ -66,8 +66,10 @@ router.post("/signin", async (req, res, next) => {
       } else {
         const userDocument = {...foundUser};
         const userObject = foundUser.toObject();
+        userObject._id = foundUser._id
         delete userObject.password;
         req.session.currentUser = userObject
+        console.log(req.session.currentUser)
         res.redirect("/")
       }
     }
