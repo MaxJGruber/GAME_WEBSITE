@@ -15,7 +15,8 @@ router.post("/user/edit", async (req, res, next) => {
   try {
     const updatedUser = await UserModel.findByIdAndUpdate(
       req.session.currentUser.id,
-      req.body
+      req.body,
+      { new: true }
     );
     res.redirect("/user/edit");
   } catch (err) {
