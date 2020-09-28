@@ -3,7 +3,7 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 400px;
+  height: 500px;
 }
 
 .title-container {
@@ -11,13 +11,13 @@
 }
 
 .introduction-title {
-  font-size: 42px;
+  font-size: 3.5em;
   color: white;
   margin: 0;
 }
 
 .slogan {
-  font-size: 0.7em;
+  font-size: 1em;
   color: white;
 }
 
