@@ -23,7 +23,7 @@
 
 .values-grid {
   display: grid;
-  grid-template-columns: 33% 33% 33%;
+  grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
 }
 
 .values-container {
