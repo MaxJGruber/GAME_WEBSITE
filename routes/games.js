@@ -12,3 +12,5 @@ router.get("/collection", async function (req, res, next) {
     next(error);
   }
 });
+
+module.exports = router;
