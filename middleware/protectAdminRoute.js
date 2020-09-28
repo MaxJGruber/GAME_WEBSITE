@@ -8,7 +8,7 @@ function protectedAdminRoute(req, res, next) {
         res.locals.currentUser = undefined;
         res.locals.isLoggedIn = false;
         res.locals.isAdmin = false;
-        req.flash("error", "Sorry you do not have access to that page");
+        // req.flash("error", "Sorry you do not have access to that page");
         res.redirect("/");
     }
 }
