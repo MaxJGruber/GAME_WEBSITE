@@ -3,13 +3,13 @@ const Schema = mongoose.Schema;
 
 const gameSchema = new Schema({
   rawgid: Number,
-  title: String,
+  name: String,
   image: {
     type: String,
     default:
       "https://www.ipsgroup.fr/wp-content/uploads/2013/12/default_image_01.png",
   },
-  metacritic: { type: Number, min: 0, max: 100 },
+  rating: { type: Number, min: 0, max: 100 },
   genre: {
     type: Array[String],
     enum: [

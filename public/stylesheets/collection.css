@@ -1,0 +1,22 @@
+.games-display {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.game-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.game-title {
+  color: black;
+  font-size: 0.7em;
+}
+
+.genre,
+.platforms {
+  color: grey;
+  font-size: 0.5em;
+}
