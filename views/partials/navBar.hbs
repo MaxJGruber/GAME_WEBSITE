@@ -9,6 +9,9 @@
     <a href="/signin">Log In</a>
     <a href="/signup">Sign Up</a>
     {{/if}}
+    {{#if isAdmin}}
+    <a href="/users">Users</a>
+    {{/if}}
     <a href="javascript:void(0);" class="icon" onclick="navbarCollapse()">
         <i class="fa fa-bars"></i>
     </a>

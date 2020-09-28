@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 const UserModel = require("../models/User.model")
-const bcrypt = require("bcrypt")
+const bcrypt = require("bcrypt");
+const session = require('express-session');
 
 const salt = 10
 /* GET home page. */
@@ -9,7 +10,7 @@ const salt = 10
 // Render the hbs file for the homepage
 router.get('/', function(req, res, next) {
   console.log(res.locals.isLoggedIn);
-    res.render('index', {isLoggedIn: req.session.currentUser});
+    res.render('index', {isLoggedIn: req.session.currentUser, isAdmin: req.session.currentUser});
 });
 
 // render the hbs file for signing up to the website
