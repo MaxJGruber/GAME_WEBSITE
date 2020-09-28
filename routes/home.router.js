@@ -8,7 +8,8 @@ const salt = 10
 
 // Render the hbs file for the homepage
 router.get('/', function(req, res, next) {
-    res.render('index', { title: 'Express' });
+  console.log(res.locals.isLoggedIn);
+    res.render('index', {isLoggedIn: req.session.currentUser});
 });
 
 // render the hbs file for signing up to the website
@@ -69,13 +70,21 @@ router.post("/signin", async (req, res, next) => {
         userObject._id = foundUser._id
         delete userObject.password;
         req.session.currentUser = userObject
-        console.log(req.session.currentUser)
+        res.locals.currentUser = req.session.currentUser;
+        res.locals.isLoggedIn = true;
+        res.locals.isAdmin = req.session.currentUser.role === "admin";
         res.redirect("/")
       }
     }
   } catch(err) {
     next(err)
   }
+});
+
+router.get("/signout", async (req, res, next) => {
+  req.session.destroy(function(err) {
+    res.redirect("/signin")
+  })
 })
 
 

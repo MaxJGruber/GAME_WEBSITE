@@ -39,6 +39,9 @@ app.use(
     })
 );
 
+// app.use(require("./middleware/protectAdminRoute"))
+// app.use(require("./middleware/protectUserRoute"))
+
 app.use("/", indexRouter);
 app.use("/", usersRouter);
 app.use("/", usersAdminRouter);
