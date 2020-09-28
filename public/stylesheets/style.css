@@ -8,3 +8,10 @@ body {
 a {
   color: #00b7ff;
 }
+
+footer {
+  background-color: teal;
+  color: antiquewhite;
+  text-align: center;
+  padding: 10px;
+}

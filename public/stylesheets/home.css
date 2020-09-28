@@ -6,9 +6,14 @@
   height: 600px;
 }
 
+.title-container {
+  padding: 10px 10px 35px 60px;
+}
+
 .introduction-title {
   font-size: 42px;
   color: white;
+  margin: 0;
 }
 
 .slogan {
