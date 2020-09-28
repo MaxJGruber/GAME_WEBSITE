@@ -10,7 +10,7 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 const session = require("express-session");
 const MongoStore = require("connect-mongo")(session);
-const indexRouter = require("./routes/index");
+const indexRouter = require("./routes/home.router");
 const usersRouter = require("./routes/users.router");
 const gamesRouter = require("./routes/games")
 
