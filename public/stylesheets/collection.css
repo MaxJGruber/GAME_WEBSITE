@@ -15,6 +15,11 @@
   font-size: 0.7em;
 }
 
+img.game-poster {
+  height: 100px;
+  width: auto;
+}
+
 .genre,
 .platforms {
   color: grey;
