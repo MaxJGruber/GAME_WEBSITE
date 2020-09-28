@@ -1,0 +1,21 @@
+<form class="form" action="/user/{{this._id}}/edit" method="POST">
+    <h1>Edit your account</h1>
+    <label for="name">Name</label>wishlist
+    <input class="input" type="text" id="name" name="name" value="{{this.name}}">
+
+    <label for="pseudo">Pseudonym</label>
+    <input class="input" type="text" id="pseudo" name="pseudo" value="{{this.pseudo}}">
+
+    <label for="favConsole">Favourite Platforms</label>
+    <input class="input" type="text" id="favConsole" name="favConsole" value="{{this.favConsole}}">
+
+    <label for="wishlist">Wishlist</label>
+    <input class="input" type="number" id="wishlist" name="wishlist" value="{{this.wishlist}}">
+
+    <label for="finished">Completed Games</label>
+    <input class="input" type="number" id="finished" name="finished" value="{{this.finished}}">
+
+    <label for="owned">Games Owned</label>
+    <input class="input" type="number" id="owned" name="owned" value="{{this.owned}}">
+    <button class="btn">Edit</button>
+</form>
