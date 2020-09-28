@@ -5,6 +5,9 @@
     <a href="#logout">Sign Out</a>
     <a href="/signup">Sign Up</a>
     <a href="#about">About</a>
+    {{#if isLoggedIn}} 
+    <a href="/user/edit">Manage account</a>
+    {{/if}}
     <a href="javascript:void(0);" class="icon" onclick="navbarCollapse()">
         <i class="fa fa-bars"></i>
     </a>
