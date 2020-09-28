@@ -1,5 +1,5 @@
 {{#each users}}
 <h4>Username: {{this.name}} - Pseudo: {{this.pseudo}}</h4>
-<a href="/user/edit/{{this._id}}">Edit</a>
-<a href="/user/delete/{{this._id}}">Delete</a>
+<a href="/user/edit/{{this._id}}"><i class="far fa-edit"></i></a>
+<a href="/user/delete/{{this._id}}"><i class="far fa-trash-alt"></i></a>
 {{/each}}
