@@ -7,6 +7,7 @@ mongoose
     useCreateIndex: true,
   })
   .then((self) => {
+    console.log('Running on ')
     console.log(
       `You have successfully connected to the DB ${self.connection.name}`
     );
