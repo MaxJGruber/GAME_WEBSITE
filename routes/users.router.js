@@ -17,6 +17,7 @@ router.post("/user/edit", async(req, res, next) => {
             req.session.currentUser.id,
             req.body, { new: true }
         );
+        console.log("tata")
         res.redirect("/user/edit");
     } catch (err) {
         next(err);
