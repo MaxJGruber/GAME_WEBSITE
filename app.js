@@ -10,7 +10,7 @@ const hbs = require("hbs");
 const mongoose = require("mongoose");
 // const MongoStore = require("connect-mongo")(session);
 var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users");
+var usersRouter = require("./routes/users.router");
 
 const app = express();
 
@@ -37,7 +37,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 // );
 
 app.use("/", indexRouter);
-app.use("/users", usersRouter);
+app.use(usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
