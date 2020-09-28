@@ -40,7 +40,7 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 app.use("/", indexRouter);
 app.use(usersRouter);
-app.use("/games", gamesRouter)
+// app.use("/games", gamesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
