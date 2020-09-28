@@ -11,7 +11,7 @@ const gameSchema = new Schema({
   },
   rating: { type: Number, min: 0, max: 100 },
   genre: {
-    type: Array[String],
+    type: [String],
     enum: [
       "Action",
       "Indie",
