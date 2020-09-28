@@ -1,16 +1,17 @@
 require("dotenv").config();
 require("./config/mongodb");
 
-var createError = require("http-errors");
-var express = require("express");
-var path = require("path");
-var cookieParser = require("cookie-parser");
-var logger = require("morgan");
+const createError = require("http-errors");
+const express = require("express");
+const path = require("path");
+const cookieParser = require("cookie-parser");
+const logger = require("morgan");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
 // const MongoStore = require("connect-mongo")(session);
-var indexRouter = require("./routes/index");
-var usersRouter = require("./routes/users.router");
+const indexRouter = require("./routes/index");
+const usersRouter = require("./routes/users.router");
+const gamesRouter = require("./routes/games")
 
 const app = express();
 
@@ -36,8 +37,10 @@ hbs.registerPartials(path.join(__dirname, "views/partials"));
 //   })
 // );
 
+
 app.use("/", indexRouter);
 app.use(usersRouter);
+app.use("/games", gamesRouter)
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
