@@ -1,11 +1,15 @@
-<h1>Welcome to the log in page</h1>signin 
+<h1>Welcome to the log in page</h1>
 
 <form action="/signin" method="POST">
 
-    <label for="">Email</label>
-    <input type="text" name=>
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email">
 
-    <label for="">Password</label>
-    <input type="password">
+    <label for="password">Password</label>
+    <input type="password" name="password" id="password">
 
+    <button>Log in</button>
+    <p>{{error}}</p>
 </form>
+
+<p>Don't have an account yet? <a href="/signup">Go to the Sign up page! </a></p>
