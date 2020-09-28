@@ -3,11 +3,11 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  height: 600px;
+  height: 400px;
 }
 
 .title-container {
-  padding: 10px 10px 35px 60px;
+  padding: 7% 10px 15% 60%;
 }
 
 .introduction-title {
@@ -21,6 +21,11 @@
   color: white;
 }
 
+#searchfield {
+  display: flex;
+  justify-content: center;
+}
+
 .values-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(33%, 1fr));
@@ -31,6 +36,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  text-align: center;
 }
 .value-title {
   color: black;
