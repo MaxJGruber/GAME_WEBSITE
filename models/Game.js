@@ -3,14 +3,14 @@ const Schema = mongoose.Schema;
 
 const gameSchema = new Schema({
   rawgid: Number,
-  name: String,
-  image: {
+  title: String,
+  img: {
     type: String,
     default:
       "https://www.ipsgroup.fr/wp-content/uploads/2013/12/default_image_01.png",
   },
-  rating: { type: Number, min: 0, max: 100 },
-  genre: {
+  ratings: { type: Number, min: 0, max: 100 },
+  genres: {
     type: [String],
     enum: [
       "Action",
@@ -34,7 +34,7 @@ const gameSchema = new Schema({
       "Card",
     ],
   },
-  platform: {
+  plateform: {
     type: String,
     enum: [
       "PlayStation 4",
