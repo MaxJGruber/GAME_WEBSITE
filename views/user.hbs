@@ -1,0 +1,23 @@
+<form class="form" action="/user/edit/{{user._id}}" method="POST" enctype="multipart/form-data">
+    <h1>Edit {{user.name}} account</h1>
+    <label for="name">Name</label>
+    <input class="input" type="text" id="name" name="name" value="{{user.name}}">
+
+    <label for="pseudo">Pseudonym</label>
+    <input class="input" type="text" id="pseudo" name="pseudo" value="{{user.pseudo}}">
+
+    <label for="age">Age</label>
+    <input class="input" type="number" id="number" name="number" value="{{user.age}}">
+
+    <label for="favConsole">Favourite Platforms</label>
+    <input class="input" type="text" id="favConsole" name="favConsole" value="{{user.favConsole}}">
+
+    <label for="favGenre">Favourite Genre</label>
+    <input class="input" type="text" id="favGenre" name="favGenre" value="{{user.favGenre}}">
+
+    <label for="img">Profile Picture</label>
+    <input class="input" type="file" id="img" name="img" value="{{user.img}}">
+
+    <button> Edit </button>
+
+</form>

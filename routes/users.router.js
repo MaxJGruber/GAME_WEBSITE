@@ -1,21 +1,26 @@
 const express = require("express");
 const router = express.Router();
-const UserModel = require("../models/User.model")
-const bcrypt = require("bcrypt");
-const protectedAdminRoute = require('../middleware/protectAdminRoute');
+const UserModel = require("../models/User.model");
 
-//route to display all users to an admin
-router.get('/users', protectedAdminRoute, async function(req, res, next) {
-    const userlist = await UserModel.find();
-    res.render('users', { users: userlist });
+router.get("/user/edit", async(req, res, next) => {
+    try {
+        const user = await UserModel.findById(req.session.currentUser.id);
+        res.render("user", { user });
+    } catch (err) {
+        next(err);
+    }
 });
 
-router.get("/user/:id/edit", async (req, res, next) => {
-  try {
-    res.render("manage_games");
-  } catch (err) {
-    next(err);
-  }
+router.post("/user/edit", async(req, res, next) => {
+    try {
+        const updatedUser = await UserModel.findByIdAndUpdate(
+            req.session.currentUser.id,
+            req.body, { new: true }
+        );
+        res.redirect("/user/edit");
+    } catch (err) {
+        next(err);
+    }
 });
 
 module.exports = router;
