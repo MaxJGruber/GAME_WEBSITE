@@ -12,17 +12,17 @@ router.get('/users', protectedAdminRoute, async function(req, res, next) {
 //route to display all users to an admin
 router.get('/users/:id', protectedAdminRoute, async function(req, res, next) {
     const user = await UserModel.findById(req.params.id);
-    res.render('user', { users: user });
+    res.render('user', { user: user });
 });
 
 //route to display all users to an admin
 router.post('/users/:id', protectedAdminRoute, async function(req, res, next) {
-    await UserModel.findByIdAndUpdate(req.params.id);
+    await UserModel.findByIdAndUpdate(req.params.id, req.body, { new: true });
     res.redirect('/users');
 });
 
 //route to display all users to an admin
 router.delete('/users/:id', protectedAdminRoute, async function(req, res, next) {
-    const userlist = await UserModel.findByIdAndDelete();
-    res.render('users', { users: userlist });
+    await UserModel.findByIdAndDelete(req.params.id);
+    res.redirect('/users');
 });
