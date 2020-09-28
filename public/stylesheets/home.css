@@ -1,0 +1,40 @@
+.header {
+  background-image: url("https://i.pinimg.com/originals/75/cf/3f/75cf3f91365a91bd323c607b911a532b.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+}
+
+.introduction-title {
+  font-size: 42px;
+  color: white;
+}
+
+.slogan {
+  font-size: 0.7em;
+  color: white;
+}
+
+.values-grid {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+
+.values-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.value-title {
+  color: black;
+}
+
+.value-intro {
+  color: grey;
+}
+
+.value-explanation {
+  color: black;
+}
