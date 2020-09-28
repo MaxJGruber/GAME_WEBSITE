@@ -31,6 +31,7 @@ router.get('/user/edit/:id', protectedAdminRoute, async function(req, res, next)
 //route to display all users to an admin
 router.post('/user/edit/:id', protectedAdminRoute, uploader.single("image"), async function(req, res, next) {
     if (req.file) {
+        console.log(req.file.path);
         req.body.image = req.file.path;
     }
     try {
@@ -47,7 +48,7 @@ router.post('/user/edit/:id', protectedAdminRoute, uploader.single("image"), asy
 });
 
 //route to display all users to an admin
-router.delete('/user/edit/:id', protectedAdminRoute, async function(req, res, next) {
+router.get('/user/delete/:id', protectedAdminRoute, async function(req, res, next) {
     try {
         await UserModel.findByIdAndDelete(req.params.id);
         res.redirect('/users');
