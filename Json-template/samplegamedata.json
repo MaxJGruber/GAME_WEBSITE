@@ -1,0 +1,157 @@
+{
+    id: 4200,
+    slug: "portal-2",
+    name: "Portal 2",
+    released: "2011-04-18",
+    tba: false,
+    background_image: "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+    metacritic: 95,
+    platforms: [{
+            platform: {
+                id: 1,
+                name: "Xbox One",
+                slug: "xbox-one",
+                image: null,
+                year_end: null,
+                year_start: null,
+                games_count: 3829,
+                image_background: "https://media.rawg.io/media/games/34b/34b1f1850a1c06fd971bc6ab3ac0ce0e.jpg"
+            },
+            released_at: "2011-04-18",
+            requirements_en: null,
+            requirements_ru: null
+        },
+        {
+            platform: {
+                id: 16,
+                name: "PlayStation 3",
+                slug: "playstation3",
+                image: null,
+                year_end: null,
+                year_start: null,
+                games_count: 3604,
+                image_background: "https://media.rawg.io/media/games/588/588c6bdff3d4baf66ec36b1c05b793bf.jpg"
+            },
+            released_at: "2011-04-19",
+            requirements_en: null,
+            requirements_ru: null
+        },
+        {
+            platform: {
+                id: 4,
+                name: "PC",
+                slug: "pc",
+                image: null,
+                year_end: null,
+                year_start: null,
+                games_count: 258893,
+                image_background: "https://media.rawg.io/media/games/84d/84da2ac3fdfc6507807a1808595afb12.jpg"
+            },
+            released_at: "2011-04-19",
+            requirements_en: null,
+            requirements_ru: {
+                minimum: "Core 2 Duo/Athlon X2 2 ГГц,1 Гб памяти,GeForce 7600/Radeon X800,10 Гб на винчестере,интернет-соединение",
+                recommended: "Core 2 Duo/Athlon X2 2.5 ГГц,2 Гб памяти,GeForce GTX 280/Radeon HD 2600,10 Гб на винчестере,интернет-соединение"
+            }
+        },
+        {
+            platform: {
+                id: 14,
+                name: "Xbox 360",
+                slug: "xbox360",
+                image: null,
+                year_end: null,
+                year_start: null,
+                games_count: 2551,
+                image_background: "https://media.rawg.io/media/games/d1a/d1a2e99ade53494c6330a0ed945fe823.jpg"
+            },
+            released_at: "2011-04-19",
+            requirements_en: null,
+            requirements_ru: null
+        },
+        {
+            platform: {
+                id: 6,
+                name: "Linux",
+                slug: "linux",
+                image: null,
+                year_end: null,
+                year_start: null,
+                games_count: 40314,
+                image_background: "https://media.rawg.io/media/games/198/1988a337305e008b41d7f536ce9b73f6.jpg"
+            },
+            released_at: "2011-04-19",
+            requirements_en: null,
+            requirements_ru: null
+        },
+        {
+            platform: {
+                id: 5,
+                name: "macOS",
+                slug: "macos",
+                image: null,
+                year_end: null,
+                year_start: null,
+                games_count: 58477,
+                image_background: "https://media.rawg.io/media/games/83f/83f6f70a7c1b86cd2637b029d8b42caa.jpg"
+            },
+            released_at: "2011-04-19",
+            requirements_en: null,
+            requirements_ru: null
+        }
+    ],
+    genres: [{
+            id: 2,
+            name: "Shooter",
+            slug: "shooter",
+            games_count: 29738,
+            image_background: "https://media.rawg.io/media/games/7a2/7a2500ee8b2c0e1ff268bb4479463dea.jpg"
+        },
+        {
+            id: 7,
+            name: "Puzzle",
+            slug: "puzzle",
+            games_count: 52207,
+            image_background: "https://media.rawg.io/media/screenshots/6fe/6fe228662a253cd929cc78a103541ee0.jpg"
+        }
+    ],
+    clip: {
+        clip: "https://media.rawg.io/media/stories-640/fde/fde8aaeeab956f6b705bbb4161b09004.mp4",
+        clips: {
+            320: "https://media.rawg.io/media/stories-320/b26/b265f65b9f16dc20245863636d4094b2.mp4",
+            640: "https://media.rawg.io/media/stories-640/fde/fde8aaeeab956f6b705bbb4161b09004.mp4",
+            full: "https://media.rawg.io/media/stories/671/67196dea179367b70212bdaed88ba451.mp4"
+        },
+        video: "dVVZaZ8yO6o",
+        preview: "https://media.rawg.io/media/stories-previews/faf/faf0bb37b806db65f1c76395c8f36c7c.jpg"
+    },
+    short_screenshots: [{
+            id: -1,
+            image: "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg"
+        },
+        {
+            id: 99018,
+            image: "https://media.rawg.io/media/screenshots/221/221a03c11e5ff9f765d62f60d4b4cbf5.jpg"
+        },
+        {
+            id: 99019,
+            image: "https://media.rawg.io/media/screenshots/173/1737ff43c14f40294011a209b1012875.jpg"
+        },
+        {
+            id: 99020,
+            image: "https://media.rawg.io/media/screenshots/b11/b11a2ae0664f0e8a1ef2346f99df26e1.jpg"
+        },
+        {
+            id: 99021,
+            image: "https://media.rawg.io/media/screenshots/9b1/9b107a790909b31918ebe2f40547cc85.jpg"
+        },
+        {
+            id: 99022,
+            image: "https://media.rawg.io/media/screenshots/d05/d058fc7f7fa6128916c311eb14267fed.jpg"
+        },
+        {
+            id: 99023,
+            image: "https://media.rawg.io/media/screenshots/415/41543dcc12dffc8e97d85a56ad42cda8.jpg"
+        }
+    ]
+},
