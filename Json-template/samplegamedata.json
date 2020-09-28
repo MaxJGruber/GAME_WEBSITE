@@ -1,17 +1,17 @@
 {
-    id: 4200,
-    slug: "portal-2",
-    name: "Portal 2",
-    released: "2011-04-18",
-    tba: false,
-    background_image: "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
-    metacritic: 95,
-    platforms: [{
-            platform: {
-                id: 1,
-                name: "Xbox One",
-                slug: "xbox-one",
-                image: null,
+    "id": 4200,
+    "slug": "portal-2",
+    "name": "Portal 2",
+    "released": "2011-04-18",
+    "tba": false,
+    "background_image": "https://media.rawg.io/media/games/328/3283617cb7d75d67257fc58339188742.jpg",
+    "metacritic": 95,
+    "platforms": [{
+            "platform": {
+                "id": 1,
+                "name": "Xbox One",
+                "slug": "xbox-one",
+                "image": null,
                 year_end: null,
                 year_start: null,
                 games_count: 3829,
