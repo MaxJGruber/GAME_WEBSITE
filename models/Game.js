@@ -9,9 +9,9 @@ const gameSchema = new Schema({
     default:
       "https://www.ipsgroup.fr/wp-content/uploads/2013/12/default_image_01.png",
   },
-  metacritic: Number,
+  metacritic: { type: Number, min: 0, max: 100 },
   genre: {
-    type: String,
+    type: Array[String],
     enum: [
       "Action",
       "Indie",
