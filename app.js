@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("./config/mongodb");
+
 var createError = require("http-errors");
 var express = require("express");
 var path = require("path");
@@ -7,7 +8,7 @@ var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 const hbs = require("hbs");
 const mongoose = require("mongoose");
-const MongoStore = require("connect-mongo")(session);
+// const MongoStore = require("connect-mongo")(session);
 var indexRouter = require("./routes/index");
 var usersRouter = require("./routes/users");
 
@@ -25,15 +26,15 @@ app.use(express.static(path.join(__dirname, "public")));
 
 hbs.registerPartials(path.join(__dirname, "views/partials"));
 
-app.use(
-  session({
-    store: new MongoStore({ mongooseConnection: mongoose.connection }),
-    secret: process.env.SESSION_SECRET,
-    resave: false,
-    saveUninitialized: true,
-    cookie: {},
-  })
-);
+// app.use(
+//   session({
+//     store: new MongoStore({ mongooseConnection: mongoose.connection }),
+//     secret: process.env.SESSION_SECRET,
+//     resave: false,
+//     saveUninitialized: true,
+//     cookie: {},
+//   })
+// );
 
 app.use("/", indexRouter);
 app.use("/users", usersRouter);
