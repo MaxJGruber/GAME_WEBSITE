@@ -22,7 +22,7 @@ router.get('/users', protectedAdminRoute, async function(req, res, next) {
 router.get('/user/edit/:id', protectedAdminRoute, async function(req, res, next) {
     try {
         const user = await UserModel.findById(req.params.id);
-        res.render('user', { user: user, genre: genre, platform: platform  });
+        res.render('userAdminEdit', { user: user, genre: genre, platform: platform  });
     } catch (error) {
         console.log(error);
         next(error);
