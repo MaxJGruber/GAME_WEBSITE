@@ -1,11 +1,14 @@
 const express = require("express");
 const router = express.Router();
 const UserModel = require("../models/User.model");
+const genre = require("../models/genre")
+const platform = require("../models/platform")
+// console.log("Platform = ", platform)
 
 router.get("/user/edit", async(req, res, next) => {
     try {
         const user = await UserModel.findById(req.session.currentUser.id);
-        res.render("user", { user });
+        res.render("user", { user , genre: genre, platform: platform });
     } catch (err) {
         next(err);
     }
