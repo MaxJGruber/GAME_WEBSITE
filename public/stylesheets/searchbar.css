@@ -39,9 +39,9 @@ input {
 }
 .search-bar {
   margin: auto;
-  padding: 1em;
+  padding: 0.5em;
   justify-content: center;
-  max-width: 30em;
+  max-width: 100%;
   border: 3px solid black;
 }
 .search-bar input {

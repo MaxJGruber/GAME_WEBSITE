@@ -14,26 +14,26 @@
 }
 
 .single-game-poster {
-  width: 200px;
+  width: 300px;
   height: auto;
 }
 
 .single-game-title {
   font-size: 1.5em;
-  margin: 0;
+  margin: 1%;
   color: black;
 }
 
 .single-genre {
   font-size: 0.9em;
   color: grey;
-  margin: 0;
+  margin: 1%;
 }
 
 .single-platforms {
   font-size: 0.9em;
   color: grey;
-  margin: 0;
+  margin: 1%;
 }
 
 .screenshot-grid {
@@ -47,6 +47,13 @@
   height: auto;
 }
 
-.iframe {
+iframe {
   margin: 5%;
+}
+
+p {
+  padding: 3%;
+  box-shadow: 1.2px 0.6px 1.5px darkblue;
+  border-radius: 0.3rem;
+  background-color: darkgray;
 }
