@@ -28,9 +28,9 @@ const userSchema = new Schema({
   favGenre: {type: [String], enum: ["Action", "Indie", "Adventure","RPG", "Strategy", "Shooter", "Casual", "Simulation", "Puzzle", "Arcade", "Platformer", "Racing", "Sports", "Massively Multiplayer", "Family", "Fighting", "Board Games", "Educational", "Card"]}, // A completer
   role: { type: String, enum: ["admin", "user"], default: "user" },
   image: {type: String, default: "https://www.kindpng.com/picc/m/105-1055561_gaming-logo-avatar-png-transparent-png.png"},
-  wishlist: [Number], // [Schema.Types.ObjectID, ref: "Games"]
-  owned: [Number], // [Schema.Types.ObjectID, ref: "Games"]
-  finished: [Number], // [Schema.Types.ObjectID, ref: "Games"]
+  wishlist: {type: [Schema.Types.ObjectID], ref: "Games" },
+  owned: {type: [Schema.Types.ObjectID], ref: "Games" },
+  finished: {type: [Schema.Types.ObjectID], ref: "Games" }
 });
 
 const UserModel = mongoose.model("User", userSchema);

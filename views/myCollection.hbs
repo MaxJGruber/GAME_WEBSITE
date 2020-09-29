@@ -1,0 +1,17 @@
+<h1>Welcome to your Collection Page</h1>
+
+<h3>All Your Games</h3>
+<ul>
+
+</ul>
+
+<h3>All the games you finished</h3>
+<ul>
+
+</ul>
+<h3>Your wishlist</h3>
+<ul>
+{{#each user.wishlist}}
+<li>{{this.title}}</li>
+{{/each}}
+</ul>
