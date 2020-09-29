@@ -10,11 +10,168 @@
         <label for="age">Age</label>
         <input class="input" type="number" id="number" name="number" value="{{user.age}}">
 
-        <label for="favConsole">Favourite Platforms</label>
-        <input class="input" type="text" id="favConsole" name="favConsole" value="{{user.favConsole}}">
+    {{!--Fav platform--}}<section>
+    <label for="favConsole">Favourite Platforms : </label>
+    {{!--<input class="input" type="text" id="favConsole" name="favConsole" value="{{user.favConsole}}">--}}
+        <div>
+            <input type="checkbox" id="ps4" name="favConsole" value="PlayStation 4">
+            <label for="ps4">PlayStation 4 </label>
+        </div>
+        <div>
+            <input type="checkbox" id="ps5" name="favConsole" value="PlayStation 5">
+            <label for="ps5">PlayStation 5 </label>
+        </div>
+        <div>
+            <input type="checkbox" id="ps3" name="favConsole" value="PlayStation 3">
+            <label for="ps3">PlayStation 3 </label>
+        </div>
+        <div>
+            <input type="checkbox" id="ps2" name="favConsole" value="PlayStation 2">
+            <label for="ps2">PlayStation 2 </label>
+        </div>
+        <div>
+            <input type="checkbox" id="ps" name="favConsole" value="PlayStation">
+            <label for="ps">PlayStation </label>
+        </div>
+        <div>
+            <input type="checkbox" id="xboxone" name="favConsole" value="Xbox One">
+            <label for="xboxone">Xbox One </label>
+        </div>
+        <div>
+            <input type="checkbox" id="xboxx" name="favConsole" value="Xbox Series X">
+            <label for="xboxx">Xbox Series X </label>
+        </div>
+        <div>
+            <input type="checkbox" id="xbox360" name="favConsole" value="Xbox 360">
+            <label for="xbox360">Xbox 360 </label>
+        </div>
+        <div>
+            <input type="checkbox" id="pc" name="favConsole" value="PC">
+            <label for="pc">PC </label>
+        </div>
+        <div>
+            <input type="checkbox" id="steam" name="favConsole" value="Steam">
+            <label for="steam">Steam </label>
+        </div>
+        <div>
+            <input type="checkbox" id="mobile" name="favConsole" value="Mobile">
+            <label for="mobile">Mobile </label>
+        </div>
+        <div>
+            <input type="checkbox" id="psp" name="favConsole" value="PSP">
+            <label for="psp">PSP </label>
+        </div>
+        <div>
+            <input type="checkbox" id="psvita" name="favConsole" value="PS Vita">
+            <label for="psvita">PS Vita </label>
+        </div>
+        <div>
+            <input type="checkbox" id="ds" name="favConsole" value="Nintendo DS">
+            <label for="ds">Nintendo DS </label>
+        </div>
+        <div>
+            <input type="checkbox" id="wii" name="favConsole" value="Nintendo WII">
+            <label for="wii">Nintendo WII </label>
+        </div>
+        <div>
+            <input type="checkbox" id="switch" name="favConsole" value="Nintendo SWITCH">
+            <label for="switch">Nintendo SWITCH </label>
+        </div>
+    </section>
 
+    {{!--fav genre--}}<section>
         <label for="favGenre">Favourite Genre</label>
-        <input class="input" type="text" id="favGenre" name="favGenre" value="{{user.favGenre}}">
+
+        <div>
+            <input type="checkbox" id="indie" name="favGenre" value="Indie">
+            <label for="indie">Indie</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="adventure" name="favGenre" value="Adventure">
+            <label for="aRPGdventure">Adventure</label>
+        </div>
+
+        <div>
+            <input type="checkbox" id="RPG" name="favGenre" value="RPG">
+            <label for="RPG">RPG</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Strategy" name="favGenre" value="Strategy">
+            <label for="Strategy">Strategy</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Shooter" name="favGenre" value="Shooter">
+            <label for="Shooter">Shooter</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Casual" name="favGenre" value="Casual">
+            <label for="Casual">Casual</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Simulation" name="favGenre" value="Simulation">
+            <label for="Simulation">Simulation</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Puzzle" name="favGenre" value="Puzzle">
+            <label for="Puzzle">Puzzle</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Arcade" name="favGenre" value="Arcade">
+            <label for="Arcade">Arcade</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Plateforme" name="favGenre" value="Plateforme">
+            <label for="Plateforme">Plateforme</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Racing" name="favGenre" value="Racing">
+            <label for="Racing">Racing</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Sports" name="favGenre" value="Sports">
+            <label for="Sports">Sports</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="multyplayer" name="favGenre" value="Massively Multyplayer">
+            <label for="multyplayer">Massively Multyplayer</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Family" name="favGenre" value="Family">
+            <label for="Family">Family</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Fighting" name="favGenre" value="Fighting">
+            <label for="Fighting">Fighting</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="board" name="favGenre" value="Board Games">
+            <label for="board">Board Games</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Educational" name="favGenre" value="Educational">
+            <label for="Educational">Educational</label>
+        </div>
+        
+        <div>
+            <input type="checkbox" id="Cards" name="favGenre" value="Cards">
+            <label for="Cards">Cards</label>
+        </div>
+    </section>
 
         <label for="img">Profile Picture</label>
         <input class="input" type="file" id="img" name="image">
