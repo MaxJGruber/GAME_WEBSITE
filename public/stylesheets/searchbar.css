@@ -3,7 +3,7 @@
 }
 button,
 input {
-  font: 1em Hind, sans-serif;
+  font: 1em Montserrat;
   line-height: 1.5em;
 }
 input {
@@ -39,9 +39,10 @@ input {
 }
 .search-bar {
   margin: auto;
-  padding: 1.5em;
+  padding: 1em;
   justify-content: center;
   max-width: 30em;
+  border: 3px solid black;
 }
 .search-bar input {
   background: transparent;
