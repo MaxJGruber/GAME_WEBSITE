@@ -1,15 +1,12 @@
-import Axios from "axios";
 import APIHandler from "./apihandler.js";
 const API = new APIHandler();
 
 const wishBtn = document.querySelectorAll(".addToWish");
 wishBtn.forEach((element) => {
-  element.onclick = addToWishlist;
+  element.onclick = addToList;
 });
 
-async function addToWishlist() {
-  const gameId = wishBtn.id;
-  console.log(gameId);
-  const result = await API.getSelectedGame(gameId);
-  console.log(result);
+async function addToList() {
+  const gameId = document.querySelector(".addToWish").getAttribute("data-id");
+  const result = await API.addToWishlist(gameId);
 }

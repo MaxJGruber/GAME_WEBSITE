@@ -8,8 +8,10 @@ class APIHandler {
   getFilter(query) {
     return axios.get(`/filter`, { params: { query: query } });
   }
-  add(query) {
-    return axios.get(`/add-to-wishlist`, { params: { query: query } });
+  addToWishlist(id) {
+    return axios.get(`/my-collection/add-to-wishlist`, {
+      params: { data: id },
+    });
   }
 }
 export default APIHandler;
