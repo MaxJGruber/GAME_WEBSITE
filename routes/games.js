@@ -10,10 +10,24 @@ const platform = require("../models/platform");
 router.get("/games/collection", async function(req, res, next) {
     try {
         const dbResult = await Games.find();
-        res.render("collection", {
-            games: dbResult,
-            javascripts: ["searchbar"],
-        });
+
+        if (req.session.currentUser) {
+            res.render("collection", {
+                games: dbResult,
+                genre,
+                platform,
+                isLoggedIn: req.session.currentUser,
+                isAdmin: req.session.currentUser.role === "admin",
+                javascripts: ["searchbar"],
+            });
+        } else {
+            res.render("collection", {
+                games: dbResult,
+                genre,
+                platform,
+                javascripts: ["searchbar"],
+            });
+        }
     } catch (error) {
         next(error);
     }
@@ -27,11 +41,20 @@ router.get("/games/collection/game/:id", async function(req, res, next) {
         const axiosResult = await axios.get(
             `https://api.rawg.io/api/games/${selectedGame.rawgid}`
         );
-        res.render("oneGame", {
-            selectedGame,
-            description: axiosResult.data.description,
-        });
-        console.log("tata");
+        if (req.session.currentUser) {
+            res.render("oneGame", {
+                selectedGame,
+                description: axiosResult.data.description,
+                isLoggedIn: req.session.currentUser,
+                isAdmin: req.session.currentUser.role === "admin",
+            });
+
+        } else {
+            res.render("oneGame", {
+                selectedGame,
+                description: axiosResult.data.description,
+            });
+        }
     } catch (error) {
         console.log(error);
         next(error);
