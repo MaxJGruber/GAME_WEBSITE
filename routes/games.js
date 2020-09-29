@@ -32,17 +32,4 @@ router.get("/collection/game/:id", async function (req, res, next) {
   }
 });
 
-// ZOOM ON ONE SCREENSHOT
-
-router.get("/collection/screenshot/:id", async function (req, res, next) {
-  try {
-    const selectedScreenshot = await Games.findById(req.params.id);
-    res.render("screenshot-wide-screen", {
-      selectedScreenshot,
-    });
-  } catch (error) {
-    next(error);
-  }
-});
-
 module.exports = router;

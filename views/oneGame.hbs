@@ -2,12 +2,12 @@
     <div class="single-game">
         <img src="{{selectedGame.img}}" alt="{{selectedGame.title}}-poster" class="single-game-poster">
         <h4 class="single-game-title">{{selectedGame.title}}</h4>
-        <h5 class="single-genre">{{selectedGame.genres}}</h5>
-        <h5 class="single-platforms">{{selectedGame.plateform}}</h5>
+        <h5 class="single-genre">Genre: {{selectedGame.genres}}</h5>
+        <h5 class="single-platforms">Platforms: {{selectedGame.plateform}}</h5>
         {{{description}}}
         <div class="screeshot-grid">
             {{#each selectedGame.screenshots}}
-            <a href="/games/collection/screenshot/{{this}}"> <img src="{{this}}" alt="{{this}}-screenshot"
+            <a href="{{this}}" target="_blank"> <img src="{{this}}" alt="{{this}}-screenshot"
                     class="single-game-screenshot"></a>
             {{/each}}
         </div>
