@@ -1,0 +1,37 @@
+.display-one-game {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.single-game {
+  margin: 5%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-game-poster {
+  width: 200px;
+  height: auto;
+}
+
+.single-game-title {
+  font-size: 1.5em;
+  margin: 0;
+  color: black;
+}
+
+.single-genre {
+  font-size: 0.9em;
+  color: grey;
+  margin: 0;
+}
+
+.single-platforms {
+  font-size: 0.9em;
+  color: grey;
+  margin: 0;
+}

@@ -17,8 +17,9 @@ async function loadGames() {
             img: item.background_image,
             ratings: item.metacritic,
             genres: item.genres.map(item => item.name), //keep only the name key of the array item.genre
-            plateform: item.platforms.map(item => item.platform.name)
-
+            plateform: item.platforms.map(item => item.platform.name),
+            screenshots: item.short_screenshots.map(item => item.image),
+            videos: item.clip.clip
         });
     });
 
@@ -29,6 +30,7 @@ async function loadGames() {
         })
         .then(async() => {
             try {
+                await Games.collection.drop();
                 const dbResult = await Games.create(results)
                 console.log(dbResult);
             } catch (error) {

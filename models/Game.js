@@ -59,6 +59,8 @@ const gameSchema = new Schema({
             "iOS"
         ],
     },
+    screenshots: [String],
+    videos: String
 });
 
 const Game = mongoose.model("Games", gameSchema);

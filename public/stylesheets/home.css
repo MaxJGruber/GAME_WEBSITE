@@ -37,9 +37,16 @@
   justify-content: center;
   align-items: center;
   text-align: center;
+  height: 80%;
+  width: 90%;
+  padding: 1%;
+  margin: 5%;
+  box-shadow: 1.2px 0.6px 1.5px darkblue;
+  border-radius: 0.3rem;
 }
 .value-title {
   color: black;
+  /* margin: 1%; */
 }
 
 .value-intro {
