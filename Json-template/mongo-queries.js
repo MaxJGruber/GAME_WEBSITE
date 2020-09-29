@@ -23,19 +23,25 @@
 //{$and: [{plateforms : "Xbox 360"}, {title : {$regex: ".*ort.*"}}]}
 
 //Two genres and NO platforms AND NO title
-//{genres : ["Xbox 360", "PC"]}
+//{genres : {$in: ["Xbox 360", "PC"]}}
 
 //Two genres and NO platforms AND title
-//{$and: [{genres : ["Xbox 360", "PC"]}, {title : {$regex: ".*ort.*"}}]}
+//{$and: [{genres : {$in: ["Xbox 360", "PC"]}}, {title : {$regex: ".*ort.*"}}]}
 
 //NO genres AND Two platforms AND NO title
-//{plateforms : ["Action", "Shooter"]}
+//{plateforms : {$in: ["Action", "Shooter"]}}
 
 //NO genres AND Two platforms AND title
-//{$and: [{plateforms : ["Action", "Shooter"]}, {title : {$regex: ".*ort.*"}}]}
+//{$and: [{plateforms : {$in: ["Action", "Shooter"]}}, {title : {$regex: ".*ort.*"}}]}
 
 //NO FILTER
 //
 
 //Does title contain???
 // {title : {$regex: ".*ort.*"}}
+
+//Two genres AND two platforms AND NO title
+//{$and: [{plateforms : {$in: ["Action", "Shooter"]}}, {genres : {$in: ["Xbox 360", "PC"]}}]}
+
+//Two genres AND two platforms AND title
+//{$and: [{plateforms : {$in: ["Action", "Shooter"]}}, {genres : {$in: ["Xbox 360", "PC"]}}, {title : {$regex: ".*ort.*"}}]}
