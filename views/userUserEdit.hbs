@@ -1,0 +1,20 @@
+<div class="profile">
+    <h1>Hello Gamer !</h1>
+    <img src="{{user.image}}" alt="{{user.name}} Image">
+    <h3>Name : {{user.username}} A.K.A {{user.pseudo}}</h3>
+    <p>Your Favorite consoles are : 
+        {{#each user.favConsole}}
+        The {{this}}, 
+        {{/each}}
+    </p>
+    <p>Your Favorite game's genre are :
+        {{#each user.favGenre}}
+        {{this}} game,  
+        {{/each}}</p>
+    <h4>If it's not true, don't hesitate to update your information below</h4>
+</div>
+<div class="form-container">
+    <form class="form" action="/user/edit" method="POST" enctype="multipart/form-data">
+{{> userForm}}
+    </form>
+</div>
