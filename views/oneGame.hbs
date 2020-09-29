@@ -4,5 +4,8 @@
         <h4 class="single-game-title">{{selectedGame.title}}</h4>
         <h5 class="single-genre">{{selectedGame.genres}}</h5>
         <h5 class="single-platforms">{{selectedGame.plateform}}</h5>
+        {{#each selectedGame.screenshots}}
+        <img src="{{this}}" alt="{{this}}-screenshot" class="single-game-screenshot">
+        {{/each}}
     </div>
 </div>

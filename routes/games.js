@@ -17,10 +17,13 @@ router.get("/collection", async function (req, res, next) {
 
 router.get("/collection/game/:id", async function (req, res, next) {
   try {
-    const selectedGame = await Games.findById(req.params.id);
-    res.render("oneGame", { selectedGame });
+    const dbResult = await Games.findById(req.params.id);
+    console.log(dbResult);
+    res.render("oneGame", {
+      selectedGame: dbResult,
+    });
   } catch (error) {
-    next(one);
+    next(error);
   }
 });
 
