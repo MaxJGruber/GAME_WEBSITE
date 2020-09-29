@@ -1,12 +1,12 @@
 class APIHandler {
-  constructor(baseURL) {
-    this.baseURL = baseURL;
-  }
-  getSelectedGame(data) {
-    return axios.get("/search/game", { params: { title: data } });
-  }
-  getSelectedTagsGender(gender, data) {
-    return axios.get(`/tags/${gender}`, { params: { id_tags: data } });
-  }
+    constructor(baseURL) {
+        this.baseURL = baseURL;
+    }
+    getSelectedGame(data) {
+        return axios.get("/search/game", { params: { title: data } });
+    }
+    getFilter(query) {
+        return axios.get(`/filter`, { params: { query: query } });
+    }
 }
 export default APIHandler;
