@@ -10,8 +10,40 @@
         <label for="age">Age</label>
         <input class="input" type="number" id="age" name="age" value="{{user.age}}">
 
-{{> checkboxListPlatform }}
-{{> checkboxListGenre }}
+        <section>
+            <label for="favConsole">Favourite Platforms : </label>
+            {{#each platform}}
+            {{#isSameId  this ../user.favConsole }}
+                <div>
+                    <input type="checkbox" id="{{this}}" name="favConsole" value="{{this}}" checked>
+                    <label for="{{this}}">{{this}}</label>
+                </div>
+            {{else}}
+                <div>
+                    <input type="checkbox" id="{{this}}" name="favConsole" value="{{this}}">
+                    <label for="{{this}}">{{this}}</label>
+                </div>
+            {{/isSameId}}
+            {{/each}}
+        </section>
+
+
+        <section>
+              <label for="favGenre">Favourite Genre : </label>
+            {{#each genre}}
+            {{#isSameId  this ../user.favGenre }}
+                <div>
+                    <input type="checkbox" id="{{this}}" name="favGenre" value="{{this}}" checked>
+                    <label for="{{this}}">{{this}}</label>
+                </div>
+            {{else}}
+                <div>
+                    <input type="checkbox" id="{{this}}" name="favGenre" value="{{this}}">
+                    <label for="{{this}}">{{this}}</label>
+                </div>
+            {{/isSameId}}
+            {{/each}}
+        </section>
 
         <label for="img">Profile Picture</label>
         <input class="input" type="file" id="img" name="image">

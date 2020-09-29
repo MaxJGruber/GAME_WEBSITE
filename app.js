@@ -1,5 +1,6 @@
 require("dotenv").config();
 require("./config/mongodb");
+require("./helpers/hbs-helpers");
 
 const createError = require("http-errors");
 const express = require("express");
