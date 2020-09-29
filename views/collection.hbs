@@ -1,10 +1,8 @@
-<div class="horizontal-container">
-    <div class="filter-bar">
-        {{> filterBar}}
-    </div>
-    <div class="games-display">
-        {{#each games}}
-        {{> game_item}}
-        {{/each}}
-    </div>
+<div id="searchfield">
+    {{>searchBar}}
+</div>
+<div class="games-display">
+    {{#each games}}
+    {{> game_item}}
+    {{/each}}
 </div>
