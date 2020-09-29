@@ -3,14 +3,16 @@ var router = express.Router();
 const UserModel = require("../models/User.model")
 const bcrypt = require("bcrypt");
 const session = require('express-session');
+const protectUserRoute = require('../middleware/protectUserRoute');
 
 const salt = 10
 /* GET home page. */
 
 // Render the hbs file for the homepage
 router.get('/', function(req, res, next) {
-  console.log(res.locals.isLoggedIn);
-    res.render('index', {isLoggedIn: req.session.currentUser, isAdmin: req.session.currentUser});
+  
+  res.render('index', {isLoggedIn: req.session.currentUser, isAdmin: req.session.currentUser.role === "admin"});
+  console.log("This >>", req);
 });
 
 // render the hbs file for signing up to the website
@@ -73,7 +75,7 @@ router.post("/signin", async (req, res, next) => {
         req.session.currentUser = userObject
         res.locals.currentUser = req.session.currentUser;
         res.locals.isLoggedIn = true;
-        res.locals.isAdmin = req.session.currentUser.role === "admin";
+        res.locals.isAdmin = req.session.currentUser.role == "admin";
         res.redirect("/")
       }
     }
