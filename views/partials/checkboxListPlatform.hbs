@@ -1,0 +1,10 @@
+    {{!-- Partial à insérer dans une form pour etre utilisé pour modifier l'utilisateur --}}
+<section>
+    <label for="favConsole">Favourite Platforms : </label>
+    {{#each platform}}
+        <div>
+            <input type="checkbox" id="{{this}}" name="favConsole" value="{{this}}">
+            <label for="{{this}}">{{this}}</label>
+        </div>
+    {{/each}}
+</section>

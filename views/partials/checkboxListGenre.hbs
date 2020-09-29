@@ -1,0 +1,9 @@
+<section>
+      <label for="favGenre">Favourite Genre : </label>
+    {{#each genre}}
+        <div>
+            <input type="checkbox" id="{{this}}" name="favGenre" value="{{this}}">
+            <label for="{{this}}">{{this}}</label>
+        </div>
+    {{/each}}
+</section>
