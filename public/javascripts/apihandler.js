@@ -8,5 +8,9 @@ class APIHandler {
     getFilter(query) {
         return axios.get(`/filter`, { params: { query: query } });
     }
+
+    addToCollection(id) {
+        return axios.get(`/my-collection/add-to-collection`, {params: {data: id}})
+    }
 }
 export default APIHandler;

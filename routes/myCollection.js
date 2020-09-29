@@ -19,13 +19,24 @@ router.get("/my-collection", async (req, res, next) => {
         next(err)
     }
 })
-// router.get("/user/collection", async (req, res, next) => {
-//     try {
 
-//     } catch(err) {
-//         next(err)
-//     }
-// })
+router.get("/my-collection/add-to-collection", async (req, res, next) => {
+    try {
+      const user = await UserModel.findById(req.session.currentUser._id)
+      let ownedList = user.owned;
+      ownedList.push(req.query.data)
+      // console.log("liiiiist pushed",ownedList);
+      user.owned = ownedList
+      // console.log(user);
+      const dbres = await UserModel.findByIdAndUpdate(req.session.currentUser._id, user);
+
+
+
+    } catch(err) {
+        next(err)
+    }
+})
+
 // router.get("/user/collection", async (req, res, next) => {
 //     try {
 
