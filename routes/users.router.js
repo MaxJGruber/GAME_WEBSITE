@@ -4,7 +4,8 @@ const UserModel = require("../models/User.model");
 
 router.get("/user/edit", async(req, res, next) => {
     try {
-        const user = await UserModel.findById(req.session.currentUser.id);
+        const user = await UserModel.findById(req.session.currentUser._id);
+        console.log(req.session.currentUser);
         res.render("user", { user });
     } catch (err) {
         next(err);
