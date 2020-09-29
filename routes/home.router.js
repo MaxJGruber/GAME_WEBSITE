@@ -11,8 +11,9 @@ const salt = 10
 // Render the hbs file for the homepage
 router.get('/', function(req, res, next) {
   if (req.session.currentUser) {
-  // res.render('index', {isLoggedIn: req.session.currentUser, isAdmin: req.session.currentUser.role === "admin"});
-  console.log("This >>", req);}
+  res.render('index', {isLoggedIn: req.session.currentUser, isAdmin: req.session.currentUser.role === "admin"});
+  // console.log("This >>", req);
+  }
   else {
     res.render('index')
   }

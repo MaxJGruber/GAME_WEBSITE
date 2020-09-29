@@ -7,7 +7,8 @@ const platform = require("../models/platform")
 
 router.get("/user/edit", async(req, res, next) => {
     try {
-        const user = await UserModel.findById(req.session.currentUser.id);
+        // console.log(req.session.currentUser._id)
+        const user = await UserModel.findById(req.session.currentUser._id);
         res.render("user", { user , genre: genre, platform: platform });
     } catch (err) {
         next(err);
