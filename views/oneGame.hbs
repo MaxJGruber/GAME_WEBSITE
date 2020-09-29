@@ -4,8 +4,14 @@
         <h4 class="single-game-title">{{selectedGame.title}}</h4>
         <h5 class="single-genre">{{selectedGame.genres}}</h5>
         <h5 class="single-platforms">{{selectedGame.plateform}}</h5>
-        {{#each selectedGame.screenshots}}
-        <img src="{{this}}" alt="{{this}}-screenshot" class="single-game-screenshot">
-        {{/each}}
+        {{{description}}}
+        <div class="screeshot-grid">
+            {{#each selectedGame.screenshots}}
+            <a href="/games/collection/screenshot/{{this}}"> <img src="{{this}}" alt="{{this}}-screenshot"
+                    class="single-game-screenshot"></a>
+            {{/each}}
+        </div>
+        <iframe width="560" height="315" src="{{selectedGame.videos}}" frameborder="0" allowfullscreen></iframe>
+        </iframe>
     </div>
 </div>

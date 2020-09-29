@@ -35,3 +35,18 @@
   color: grey;
   margin: 0;
 }
+
+.screenshot-grid {
+  display: grid;
+  grid-template-columns: auto;
+  margin: 5% 0;
+}
+
+.single-game-screenshot {
+  width: 100px;
+  height: auto;
+}
+
+.iframe {
+  margin: 5%;
+}
