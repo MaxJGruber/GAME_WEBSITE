@@ -7,6 +7,15 @@ const platform = require("../models/platform");
 
 // GETTING ALL GAMES
 
+router.get("/filter", async function(req, res, next) {
+    try {
+        const dbResult = await Games.find(req.query);
+        res.send(dbResult);
+    } catch (error) {
+        next(error);
+    }
+});
+
 router.get("/games/collection", async function(req, res, next) {
     try {
         const dbResult = await Games.find();
@@ -18,7 +27,7 @@ router.get("/games/collection", async function(req, res, next) {
                 platform,
                 isLoggedIn: req.session.currentUser,
                 isAdmin: req.session.currentUser.role === "admin",
-                javascripts: ["searchbar"],
+                javascripts: ["searchbar", "filterBar"],
             });
         } else {
             res.render("collection", {
