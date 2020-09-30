@@ -2,6 +2,7 @@ console.log("filterbar loaded");
 import APIHandler from "./apihandler.js";
 const apiFilter = new APIHandler();
 
+let htmlBody = document.getElementById("toto");
 const genreBox = document.querySelectorAll("input[name='favGenre']");
 const platformBox = document.querySelectorAll("input[name='favConsole']");
 const searchBar = document.querySelector(".input-search");
@@ -33,26 +34,29 @@ async function filterHandler() {
     let searchValue = searchBar.value; // value of search bar
     let strQuery = ""; // '{$and: [{"plateform" : selectedPlatform}, {"genres" : selectedGenre}]}';
 
-    console.log("genre: ", selectedGenre, ' length: ', selectedGenre.length);
-    console.log("platform: ", selectedPlatform, ' length: ', selectedPlatform.length);
-    console.log("title ", searchValue);
+    //console.log("genre: ", selectedGenre, ' length: ', selectedGenre.length);
+    //console.log("platform: ", selectedPlatform, ' length: ', selectedPlatform.length);
+    //console.log("title ", searchValue);
     const gamesFiltered = await apiFilter.getFilter(selectedGenre, selectedPlatform, searchValue);
-    console.log(gamesFiltered.data);
-    //gamesFiltered.forEach(game => generateHtmlGameCard(game));
+    //console.log(gamesFiltered.data);
+    htmlBody.innerHTML = '';
+    for (let game of gamesFiltered.data) {
+        //console.log(game);
+        createGameDiv(game);
+    }
+
 }
 
 
 
-function generateHtmlGameCard(card) {
-    return `<div class="game-container">
-    <h4 class="game-title">${card.title}</h4>
-    <img src="${card.img}" alt="${card.title}-poster" class="game-poster">
-    <h5 class="genre">${card.genres}</h5>
-    <h5 class="platforms">${card.plateform}</h5>
-    <a href="/games/collection/game/${card._id}">View details</a>
-</div>`
-}
-
-function arrayToString(array) {
-    return '["' + array.join('","') + '"]';
+function createGameDiv(game) {
+    let div = document.createElement("div");
+    div.classList.add("game-container");
+    div.innerHTML = `<h4 class="game-title">${game.title}</h4>
+    <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
+    <h5 class="genre">${game.genres}</h5>
+    <h5 class="platforms">${game.plateform}</h5>
+    <a href="/games/collection/game/${game._id}">View details</a>
+    <p class="addToCollec" data-id="${game._id}">Add to My Collection</p>`
+    htmlBody.appendChild(div);
 }
