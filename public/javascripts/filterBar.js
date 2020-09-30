@@ -36,73 +36,7 @@ async function filterHandler() {
     console.log("genre: ", selectedGenre, ' length: ', selectedGenre.length);
     console.log("platform: ", selectedPlatform, ' length: ', selectedPlatform.length);
     console.log("title ", searchValue);
-
-    //construct the correct query
-    //for genre
-    let strQueryGenre;
-    if (selectedGenre.length >= 2) {
-        strQueryGenre = ` genres : {$in: ${arrayToString(selectedGenre)}}`;
-    } else if (selectedGenre.length == 1) {
-        strQueryGenre = `genres : "${selectedGenre}"`;
-    } else {
-        strQueryGenre = "";
-    }
-
-    console.log("strQueryGenre ", strQueryGenre);
-    //for platform
-    let strQueryPlatform;
-    if (selectedPlatform.length >= 2) {
-        strQueryPlatform = ` platform : {$in: ${arrayToString(selectedPlatform)}}`;
-    } else if (selectedPlatform.length == 1) {
-        strQueryPlatform = `platform : "${selectedPlatform}"`;
-    } else {
-        strQueryPlatform = "";
-    }
-
-    console.log("strQueryPlatform ", strQueryPlatform);
-    //for title
-    let strQueryTitle = searchValue ? `{title : {$regex: ".*${searchValue}.*"}}` : "";
-
-    //there is titleinput
-    if (strQueryTitle) {
-        // there is genre and platform
-        if (selectedGenre.length > 0 && selectedPlatform.length > 0) {
-            strQuery = `{$and: [${strQueryGenre}, ${strQueryPlatform}, ${strQueryTitle}]}`;
-        }
-        //there is no genre
-        if (selectedGenre.length == 0) {
-            strQuery = `{$and: [${strQueryPlatform}, ${strQueryTitle}]}`;
-        }
-        //there is no platform
-        if (selectedPlatform.length == 0) {
-            strQuery = `{$and: [${strQueryGenre}, ${strQueryTitle}]}`;
-        }
-        //there is no genre nor platform (only title)
-        if (selectedGenre.length == 0 && selectedPlatform.length == 0) {
-            strQuery = `{${strQueryTitle}}`;
-        }
-        //there is no title
-    } else {
-        // there is genre and platform
-        if (selectedGenre.length > 0 && selectedPlatform.length > 0) {
-            strQuery = `{$and: [${strQueryGenre}, ${strQueryPlatform}]}`;
-        }
-        //there is no genre
-        if (selectedGenre.length == 0) {
-            strQuery = `{${strQueryPlatform}}`;
-        }
-        //there is no platform
-        if (selectedPlatform.length == 0) {
-            strQuery = `{${strQueryGenre}}`;
-        }
-        //there is no genre nor platform nor title
-        if (selectedGenre.length == 0 && selectedPlatform.length == 0) {
-            strQuery = ``;
-        }
-    }
-
-    console.log(strQuery);
-    const gamesFiltered = await apiFilter.getFilter(strQuery);
+    const gamesFiltered = await apiFilter.getFilter(selectedGenre, selectedPlatform, searchValue);
     console.log(gamesFiltered.data);
     //gamesFiltered.forEach(game => generateHtmlGameCard(game));
 }

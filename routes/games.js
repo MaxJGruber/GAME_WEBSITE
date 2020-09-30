@@ -10,11 +10,42 @@ const platform = require("../models/platform");
 router.get("/filter", async function(req, res, next) {
     try {
         console.log("******************************", req.query);
-        let stringquery = req.query;
-        //stringquery.split("'");
-        console.log(typeof stringquery.query);
-        console.log(stringquery.query);
-        const dbResult = await Games.find(stringquery.query);
+        let andQuery = [];
+
+        if (req.query.title) {
+            let query = {};
+            const reg = new RegExp(`.*${req.query.title}.*`, "i");
+            query.title = { $regex: reg };
+            andQuery.push(query);
+        }
+        if (req.query.platform) {
+            let query = {};
+            query.plateform = { $in: req.query.platform }
+            andQuery.push(query);
+        }
+        if (req.query.genres) {
+            let query = {};
+            query.genres = { $in: req.query.genres }
+            andQuery.push(query);
+        }
+        //let finalquery = andQuery.length > 1 ? { $and: andQuery } : andQuery[0];
+        let finalquery = {};
+        if (andQuery.length > 1) {
+            finalquery.$and = andQuery;
+        } else {
+            finalquery = andQuery[0] ? andQuery[0] : {};
+        }
+
+        console.log("finalquery: ", finalquery);
+
+
+        // { 
+        //    $and :[ platform: [""],
+        //     title: ]
+        // }
+
+
+        const dbResult = await Games.find(finalquery);
         res.send(dbResult);
         //res.send("toto");
     } catch (error) {
