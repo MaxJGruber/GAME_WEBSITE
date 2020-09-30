@@ -50,13 +50,10 @@ const deleteWishBtn = document.querySelectorAll(".del-wish");
 const deleteFinishedBtn = document.querySelectorAll(".del-finished");
 const deleteOwnedBtn = document.querySelectorAll(".del-owned");
 
-console.log(deleteWishBtn)
+console.log(deleteWishBtn);
 
 deleteWishBtn.forEach((button) => {
-  button.onclick = function() {
-    console.log("toto")
-  };
-  
+  button.onclick = deleteFromWishlistList;
 });
 
 deleteFinishedBtn.forEach((button) => {
@@ -71,14 +68,17 @@ async function deleteFromWishlistList(evt) {
   console.log("toto");
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromWishlist(gameId);
+  window.location = `http://localhost:3000/my-collection`;
 }
 
 async function deleteFromFinishedList(evt) {
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromFinished(gameId);
+  window.location = `http://localhost:3000/my-collection`;
 }
 
 async function deleteFromOwnedList(evt) {
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromOwned(gameId);
+  window.location = `http://localhost:3000/my-collection`;
 }
