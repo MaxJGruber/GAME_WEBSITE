@@ -44,7 +44,7 @@ async function addToFinishList(evt) {
   const res = await apiFilter.addToFinish(gameId);
 }
 
-// BUTTON TO DELETE
+// BUTTONS TO DELETE
 
 const deleteWishBtn = document.querySelectorAll(".del-wish");
 const deleteFinishedBtn = document.querySelectorAll(".del-finished");
