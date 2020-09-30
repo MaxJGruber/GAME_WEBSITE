@@ -2,16 +2,24 @@
 
 <h3>All Your Games</h3>
 <ul>
-
+    {{#each user.owned}}
+    <a href="/games/collection/game/{{this._id}}">
+        <li>{{this.title}}</li>
+    </a>
+    {{/each}}
 </ul>
 
 <h3>All the games you finished</h3>
 <ul>
-
+    {{#each user.finished}}
+    <li>{{this.title}}</li>
+    {{/each}}
 </ul>
 <h3>Your wishlist</h3>
 <ul>
     {{#each user.wishlist}}
-    <li>{{this.title}}</li>
+    <a href="/games/collection/game/{{this._id}}">
+        <li>{{this.title}}</li>
+    </a>
     {{/each}}
 </ul>
