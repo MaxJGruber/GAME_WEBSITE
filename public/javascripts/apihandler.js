@@ -1,5 +1,4 @@
 class APIHandler {
-
     constructor(baseURL) {
         this.baseURL = baseURL;
     }

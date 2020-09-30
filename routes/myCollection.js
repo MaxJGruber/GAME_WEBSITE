@@ -43,13 +43,23 @@ router.get("/my-collection/add-to-collection", async (req, res, next) => {
   }
 });
 
-// router.get("/user/collection", async (req, res, next) => {
-//     try {
+router.get("/my-collection/add-to-finish", async (req, res, next) => {
+  try {
+    const user = await UserModel.findById(req.session.currentUser._id)
+    let finishedList = user.finished;
+    finishedList.push(req.query.data)
+    // console.log("liiiiist pushed",ownedList);
+    user.finished = finishedList
+    // console.log(user);
+    const dbres = await UserModel.findByIdAndUpdate(req.session.currentUser._id, user);
 
-//     } catch(err) {
-//         next(err)
-//     }
-// })
+
+
+  } catch(err) {
+      next(err)
+  }
+})
+
 // router.get("/user/collection", async (req, res, next) => {
 //     try {
 
