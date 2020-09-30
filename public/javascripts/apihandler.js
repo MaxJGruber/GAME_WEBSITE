@@ -21,5 +21,11 @@ class APIHandler {
             params: { data: id },
         });
     }
+
+    addToFinish(id) {
+        return axios.get(`/my-collection/add-to-finish`, {
+            params: { data: id },
+        });
+    }
 }
 export default APIHandler;
