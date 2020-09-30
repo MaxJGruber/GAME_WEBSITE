@@ -15,10 +15,11 @@ router.get("/my-collection", async function (req, res, next) {
         isLoggedIn: req.session.currentUser,
         isAdmin: req.session.currentUser.role === "admin",
         user: dbres,
+        javascripts: ["myCollection"]
       });
       // console.log("This >>", req);
     } else {
-      res.render("index", { user: dbres, new: true });
+      res.render("index", { user: dbres, new: true, javascript: ["myCollection"] });
     }
   } catch (err) {
     next(err);

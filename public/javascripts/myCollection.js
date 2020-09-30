@@ -50,9 +50,13 @@ const deleteWishBtn = document.querySelectorAll(".del-wish");
 const deleteFinishedBtn = document.querySelectorAll(".del-finished");
 const deleteOwnedBtn = document.querySelectorAll(".del-owned");
 
+console.log(deleteWishBtn)
+
 deleteWishBtn.forEach((button) => {
-  button.onclick = deleteFromWishlistList;
-  console.log("toto");
+  button.onclick = function() {
+    console.log("toto")
+  };
+  
 });
 
 deleteFinishedBtn.forEach((button) => {
