@@ -4,7 +4,7 @@ const mongoose = require("mongoose");
 const axios = require('axios');
 
 async function loadGames() {
-    const gameslist = await axios.get("https://api.rawg.io/api/games");
+    const gameslist = await axios.get("https://api.rawg.io/api/games?page_size=40");
     const gamesresult = gameslist.data.results;
     const results = [];
 

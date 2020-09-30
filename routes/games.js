@@ -10,12 +10,12 @@ const platform = require("../models/platform");
 router.get("/filter", async function(req, res, next) {
     try {
         console.log("******************************", req.query);
-        let stringquery = req.query + "";
-        stringquery.split("'");
-        console.log(stringquery[0]);
-        //const dbResult = await Games.find(string);
-        //res.send(dbResult);
-        res.send("toto");
+        let stringquery = req.query;
+        //stringquery.split("'");
+        console.log(stringquery.query);
+        const dbResult = await Games.find(stringquery.query);
+        res.send(dbResult);
+        //res.send("toto");
     } catch (error) {
         console.log(error)
         next(error);
@@ -24,7 +24,7 @@ router.get("/filter", async function(req, res, next) {
 
 router.get("/games/collection", async function(req, res, next) {
     try {
-        const dbResult = await Games.find();
+        const dbResult = await Games.find().limit(10);
 
         if (req.session.currentUser) {
             res.render("collection", {
@@ -33,14 +33,14 @@ router.get("/games/collection", async function(req, res, next) {
                 platform,
                 isLoggedIn: req.session.currentUser,
                 isAdmin: req.session.currentUser.role === "admin",
-                javascripts: ["searchbar", "filterBar", "myCollection"],
+                javascripts: ["searchbar", "filterBar", "infinitescroll"]
             });
         } else {
             res.render("collection", {
                 games: dbResult,
                 genre,
                 platform,
-                javascripts: ["searchbar", "myCollection"],
+                javascripts: ["searchbar"],
             });
         }
     } catch (error) {
@@ -62,14 +62,12 @@ router.get("/games/collection/game/:id", async function(req, res, next) {
                 description: axiosResult.data.description,
                 isLoggedIn: req.session.currentUser,
                 isAdmin: req.session.currentUser.role === "admin",
-                javascripts : ["myCollection"]
             });
 
         } else {
             res.render("oneGame", {
                 selectedGame,
                 description: axiosResult.data.description,
-                javascripts : myCollection
             });
         }
     } catch (error) {
