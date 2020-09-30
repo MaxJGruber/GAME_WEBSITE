@@ -33,14 +33,14 @@ router.get("/games/collection", async function(req, res, next) {
                 platform,
                 isLoggedIn: req.session.currentUser,
                 isAdmin: req.session.currentUser.role === "admin",
-                javascripts: ["searchbar", "filterBar"],
+                javascripts: ["searchbar", "filterBar", "myCollection"],
             });
         } else {
             res.render("collection", {
                 games: dbResult,
                 genre,
                 platform,
-                javascripts: ["searchbar"],
+                javascripts: ["searchbar", "myCollection"],
             });
         }
     } catch (error) {
@@ -62,12 +62,14 @@ router.get("/games/collection/game/:id", async function(req, res, next) {
                 description: axiosResult.data.description,
                 isLoggedIn: req.session.currentUser,
                 isAdmin: req.session.currentUser.role === "admin",
+                javascripts : ["myCollection"]
             });
 
         } else {
             res.render("oneGame", {
                 selectedGame,
                 description: axiosResult.data.description,
+                javascripts : myCollection
             });
         }
     } catch (error) {
