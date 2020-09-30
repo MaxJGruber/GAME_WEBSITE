@@ -6,7 +6,7 @@
     <a href="/games/collection/game/{{this._id}}">
         <li>{{this.title}}</li>
     </a>
-    <p class="del-owned" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></p>
+    <a class="del-owned" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
 
     {{/each}}
 </ul>
@@ -17,7 +17,7 @@
     <a href="/games/collection/game/{{this._id}}">
         <li>{{this.title}}</li>
     </a>
-    <p class="del-finished" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></p>
+    <a class="del-finished" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
     {{/each}}
 </ul>
 <h3>Your wishlist</h3>
@@ -26,6 +26,6 @@
     <a href="/games/collection/game/{{this._id}}">
         <li>{{this.title}}</li>
     </a>
-    <p class="del-wish" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
+    <a class="del-wish" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
         {{/each}}
 </ul>
