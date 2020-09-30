@@ -22,17 +22,14 @@ class APIHandler {
         });
     }
 
-<<<<<<< HEAD
     getGamePage(page) {
         return axios.get("/games/load/" + page)
     }
 
-=======
     addToFinish(id) {
         return axios.get(`/my-collection/add-to-finish`, {
             params: { data: id },
         });
     }
->>>>>>> 71251d63bf2959a8c2da32b09becac0fa595f671
 }
 export default APIHandler;
