@@ -53,19 +53,21 @@ router.get("/my-collection/add-to-finish", async (req, res, next) => {
     // console.log(user);
     const dbres = await UserModel.findByIdAndUpdate(req.session.currentUser._id, user);
 
-
-
   } catch(err) {
       next(err)
   }
 })
 
-// router.get("/user/collection", async (req, res, next) => {
-//     try {
-
-//     } catch(err) {
-//         next(err)
-//     }
-// })
+router.get(`/my-collection/add-to-wishlist`, async function (req, res, next) {
+  const user = await UserModel.findById(req.session.currentUser._id);
+  const game = await Games.findById(req.query.data);
+  user.wishlist.push(game._id);
+  const result = await UserModel.findByIdAndUpdate(
+    req.session.currentUser._id,
+    user,
+    { new: true }
+  );
+  res.send(result);
+});
 
 module.exports = router;
