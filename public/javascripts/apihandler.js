@@ -13,7 +13,9 @@ class APIHandler {
     }
 
     addToCollection(id) {
-        return axios.get(`/my-collection/add-to-collection`, { params: { data: id } })
+        return axios.get(`/my-collection/add-to-collection`, {
+            params: { data: id },
+        });
     }
 
     addToWishlist(id) {
@@ -22,14 +24,29 @@ class APIHandler {
         });
     }
 
-    getGamePage(page) {
-        return axios.get("/games/load/" + page)
-    }
-
     addToFinish(id) {
         return axios.get(`/my-collection/add-to-finish`, {
             params: { data: id },
         });
+    }
+    deleteFromWishlist(id) {
+        return axios.get(`/my-collection/delete-from-wishlist`, {
+            params: { data: id },
+        });
+    }
+    deleteFromFinished(id) {
+        return axios.get(`/my-collection/delete-from-finished`, {
+            params: { data: id },
+        });
+    }
+    deleteFromOwned(id) {
+        return axios.get(`/my-collection/delete-from-owned`, {
+            params: { data: id },
+        });
+    }
+
+    getGamePage(page) {
+        return axios.get("/games/load/" + page);
     }
 }
 export default APIHandler;
