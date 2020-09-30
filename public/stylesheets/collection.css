@@ -1,28 +1,37 @@
+/* .games-display {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    grid-gap: 10px;
+} */
+
 .games-display {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  grid-gap: 10px;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    height: 90vh;
+    overflow: scroll;
 }
 
 .game-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-title {
-  color: black;
-  font-size: 0.7em;
+    color: black;
+    font-size: 0.7em;
 }
 
 img.game-poster {
-  height: auto;
-  width: 100px;
+    height: auto;
+    width: 100px;
 }
 
 .genre,
 .platforms {
-  color: grey;
-  font-size: 0.5em;
+    color: grey;
+    font-size: 0.5em;
 }
