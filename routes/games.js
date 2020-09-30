@@ -9,9 +9,15 @@ const platform = require("../models/platform");
 
 router.get("/filter", async function(req, res, next) {
     try {
-        const dbResult = await Games.find(req.query);
-        res.send(dbResult);
+        console.log("******************************", req.query);
+        let stringquery = req.query + "";
+        stringquery.split("'");
+        console.log(stringquery[0]);
+        //const dbResult = await Games.find(string);
+        //res.send(dbResult);
+        res.send("toto");
     } catch (error) {
+        console.log(error)
         next(error);
     }
 });
