@@ -56,7 +56,10 @@ const gameSchema = new Schema({
             "macOS",
             "Linux",
             "Android",
-            "iOS"
+            "iOS",
+            "Web",
+            "Wii U",
+            "Nintendo 3DS"
         ],
     },
     screenshots: [String],

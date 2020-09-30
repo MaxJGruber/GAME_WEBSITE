@@ -1,4 +1,4 @@
-var listElm = document.querySelector('#infinite-list');
+var htmlBody = document.querySelector("body");
 
 // Add 20 items.
 var nextItem = 1;
@@ -11,11 +11,14 @@ var loadMore = function() {
 }
 
 // Detect when scrolled to bottom.
-listElm.addEventListener('scroll', function() {
-    if (listElm.scrollTop + listElm.clientHeight >= listElm.scrollHeight) {
-        loadMore();
+document.addEventListener('scroll', function() {
+
+    console.log(document.scrollTop, document.clientHeight, document.scrollHeight)
+    if (document.scrollTop + document.clientHeight >= document.scrollHeight) {
+        //     loadMore();
+        console.log("toto");
     }
 });
 
 // Initially load some items.
-loadMore();
+//loadMore();

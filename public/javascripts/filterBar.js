@@ -41,9 +41,9 @@ async function filterHandler() {
     //for genre
     let strQueryGenre;
     if (selectedGenre.length >= 2) {
-        strQueryGenre = `{ genres : {$in: ${selectedGenre}}}`
-    } else if (selectedGenre[0]) {
-        strQueryGenre = `{genres : ${selectedGenre}}`
+        strQueryGenre = ` genres : {$in: ${arrayToString(selectedGenre)}}`;
+    } else if (selectedGenre.length == 1) {
+        strQueryGenre = `genres : "${selectedGenre}"`;
     } else {
         strQueryGenre = "";
     }
@@ -52,9 +52,9 @@ async function filterHandler() {
     //for platform
     let strQueryPlatform;
     if (selectedPlatform.length >= 2) {
-        strQueryPlatform = `{ platform : {$in: ${selectedPlatform}}}`
-    } else if (selectedPlatform[0]) {
-        strQueryPlatform = `{platform : ${selectedPlatform}}`
+        strQueryPlatform = ` platform : {$in: ${arrayToString(selectedPlatform)}}`;
+    } else if (selectedPlatform.length == 1) {
+        strQueryPlatform = `platform : "${selectedPlatform}"`;
     } else {
         strQueryPlatform = "";
     }
@@ -117,4 +117,8 @@ function generateHtmlGameCard(card) {
     <h5 class="platforms">${card.plateform}</h5>
     <a href="/games/collection/game/${card._id}">View details</a>
 </div>`
+}
+
+function arrayToString(array) {
+    return '["' + array.join('","') + '"]';
 }
