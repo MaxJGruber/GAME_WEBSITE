@@ -1,12 +1,2 @@
-.forms {
-  display: flex;
-  justify-content: center;
-}
 
-.indiv-form {
-  width: 300px;
-  padding: 10px;
-  box-shadow: 1.2px 0.6px 1.5px darkblue;
-  border-radius: 0.3rem;
-  margin: 10px;
-}
+

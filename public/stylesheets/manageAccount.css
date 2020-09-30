@@ -1,0 +1,41 @@
+.profile {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* .greeting {
+  text-align: center;
+} */
+
+.user-avatar {
+  width: 250px;
+  height: auto;
+}
+
+.intro-genre,
+.intro-platform {
+  padding: 5px;
+  background-color: cornflowerblue;
+}
+
+.indiv-form {
+  margin: 50%;
+  box-shadow: 1.2px 0.6px 1.5px darkblue;
+  border-radius: 0.3rem;
+  margin: 10px;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.forms {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
