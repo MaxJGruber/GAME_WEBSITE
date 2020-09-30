@@ -6,7 +6,9 @@ const Games = require("../models/Game");
 router.get("/my-collection", async function (req, res, next) {
   try {
     const dbres = await UserModel.findById(req.session.currentUser._id);
-    let dbpop = await dbres.populate("wishlist owned").execPopulate();
+    const dbpop = await dbres
+      .populate("wishlist owned finished")
+      .execPopulate();
     // console.log("********", dbpop);
     if (req.session.currentUser) {
       res.render("myCollection", {
@@ -22,6 +24,7 @@ router.get("/my-collection", async function (req, res, next) {
     next(err);
   }
 });
+
 
 router.get("/my-collection/add-to-collection", async (req, res, next) => {
   try {
