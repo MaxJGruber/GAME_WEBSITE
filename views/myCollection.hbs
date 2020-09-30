@@ -1,31 +1,81 @@
 <h1>Welcome to your Collection Page</h1>
 
 <h3>All Your Games</h3>
-<ul>
-    {{#each user.owned}}
-    <a href="/games/collection/game/{{this._id}}">
-        <li>{{this.title}}</li>
-    </a>
-    <a class="del-owned" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
 
+<table>
+    <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Platform</th>
+            <th>Remove from My Collection</th>
+        </tr>
+    </thead>
+    <tbody>
+    {{#each user.owned}}
+    <tr>
+        <td><img src="{{this.img}}" alt="{{this.title}}" class="tableImage"></td>
+        <td><a href="/games/collection/game/{{this._id}}">
+            {{this.title}}</a>
+        </td>
+    <td>{{this.genres}} </td>
+    <td>{{this.plateform}} </td>
+    <td><a class="del-owned" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a></td>
+    </tr>
     {{/each}}
-</ul>
+    </tbody>
+</table>
+
 
 <h3>All the games you finished</h3>
-<ul>
+<table>
+    <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Platform</th>
+            <th>Remove from My Collection</th>
+        </tr>
+    </thead>
+    <tbody>
     {{#each user.finished}}
-    <a href="/games/collection/game/{{this._id}}">
-        <li>{{this.title}}</li>
-    </a>
-    <a class="del-finished" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
+    <tr>
+        <td><img src="{{this.img}}" alt="{{this.title}}" class="tableImage"></td>
+        <td><a href="/games/collection/game/{{this._id}}">
+            {{this.title}}</a>
+        </td>
+    <td>{{this.genres}} </td>
+    <td>{{this.plateform}} </td>
+    <td><a class="del-finished" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a></td>
+    </tr>
     {{/each}}
-</ul>
+</tbody>
+</table>
 <h3>Your wishlist</h3>
-<ul>
+<table>
+    <thead>
+        <tr>
+            <th>Cover</th>
+            <th>Title</th>
+            <th>Genre</th>
+            <th>Platform</th>
+            <th>Remove from My Collection</th>
+        </tr>
+    </thead>
+    <tbody>
     {{#each user.wishlist}}
-    <a href="/games/collection/game/{{this._id}}">
-        <li>{{this.title}}</li>
-    </a>
-    <a class="del-wish" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a>
-        {{/each}}
-</ul>
+    <tr>
+        <td><img src="{{this.img}}" alt="{{this.title}}" class="tableImage"></td>
+        <td><a href="/games/collection/game/{{this._id}}">
+            {{this.title}}</a>
+        </td>
+    <td>{{this.genres}} </td>
+    <td>{{this.plateform}} </td>
+    <td><a class="del-wish" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a></td>
+    </tr>
+    {{/each}}
+</tbody>
+</table>
+   
