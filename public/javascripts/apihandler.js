@@ -5,8 +5,8 @@ class APIHandler {
     getSelectedGame(data) {
         return axios.get("/search/game", { params: { title: data } });
     }
-    getFilter(querystr) {
-        return axios.get(`/filter`, { params: { query: querystr } });
+    getFilter(genre, plateforme, titre) {
+        return axios.get(`/filter`, { params: { genres: genre, platform: plateforme, title: titre } });
     }
     add(query) {
         return axios.get(`/add-to-wishlist`, { params: { query: query } });
