@@ -15,11 +15,15 @@ router.get("/my-collection", async function (req, res, next) {
         isLoggedIn: req.session.currentUser,
         isAdmin: req.session.currentUser.role === "admin",
         user: dbres,
-        javascripts: ["myCollection"]
+        javascripts: ["myCollection"],
       });
       // console.log("This >>", req);
     } else {
-      res.render("index", { user: dbres, new: true, javascript: ["myCollection"] });
+      res.render("index", {
+        user: dbres,
+        new: true,
+        javascript: ["myCollection"],
+      });
     }
   } catch (err) {
     next(err);
@@ -85,10 +89,79 @@ router.get("/my-collection/delete-from-wishlist", async function (
   try {
     const user = await UserModel.findById(req.session.currentUser._id);
     const game = await Games.findById(req.query.data);
-    console.log(user, "_________", game);
-    user.wishlist.push(game._id);
+    console.log(req.query.data);
+    const index = user.wishlist.indexOf(req.query.data);
+    console.log(user.wishlist);
+    // console.log(">>>INDEX>>>", index);
+    // console.log("USER WL BEFORE SLICE", user.wishlist);
+    const userWishlist = user.wishlist;
+    const modifiedArray = user.wishlist.splice(index, 1);
+    // console.log("MODIFIED ARRAY", modifiedArray);
+    // console.log("USERWISHLIST", userWishlist);
+    user.wishlist = userWishlist;
+    const updatedUser = await UserModel.findByIdAndUpdate(
+      req.session.currentUser._id,
+      { wishlist: userWishlist },
+      { new: true }
+    );
+    res.redirect("/my-collection");
   } catch (error) {
     next(error);
   }
 });
+
+router.get("/my-collection/delete-from-owned", async function (req, res, next) {
+  try {
+    const user = await UserModel.findById(req.session.currentUser._id);
+    const game = await Games.findById(req.query.data);
+    console.log(req.query.data);
+    const index = user.owned.indexOf(req.query.data);
+    console.log(user.owned);
+    // console.log(">>>INDEX>>>", index);
+    // console.log("USER WL BEFORE SLICE", user.wishlist);
+    const userOwnedList = user.owned;
+    const modifiedArray = user.owned.splice(index, 1);
+    // console.log("MODIFIED ARRAY", modifiedArray);
+    // console.log("USERWISHLIST", userWishlist);
+    user.owned = userOwnedList;
+    const updatedUser = await UserModel.findByIdAndUpdate(
+      req.session.currentUser._id,
+      { owned: userOwnedList },
+      { new: true }
+    );
+    res.redirect("/my-collection");
+  } catch (error) {
+    next(error);
+  }
+});
+
+router.get("/my-collection/delete-from-finished", async function (
+  req,
+  res,
+  next
+) {
+  try {
+    const user = await UserModel.findById(req.session.currentUser._id);
+    const game = await Games.findById(req.query.data);
+    // console.log(req.query.data);
+    const index = user.finished.indexOf(req.query.data);
+    // console.log(user.wishlist);
+    // console.log(">>>INDEX>>>", index);
+    // console.log("USER WL BEFORE SLICE", user.wishlist);
+    const userFinishedList = user.finished;
+    const modifiedArray = user.finished.splice(index, 1);
+    // console.log("MODIFIED ARRAY", modifiedArray);
+    // console.log("USERWISHLIST", userWishlist);
+    user.wishlist = userFinishedList;
+    const updatedUser = await UserModel.findByIdAndUpdate(
+      req.session.currentUser._id,
+      { finished: userFinishedList },
+      { new: true }
+    );
+    res.redirect("/my-collection");
+  } catch (error) {
+    next(error);
+  }
+});
+
 module.exports = router;
