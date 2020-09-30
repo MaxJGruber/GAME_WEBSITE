@@ -22,5 +22,10 @@ class APIHandler {
             params: { data: id },
         });
     }
+
+    getGamePage(page) {
+        return axios.get("/games/load/" + page)
+    }
+
 }
 export default APIHandler;

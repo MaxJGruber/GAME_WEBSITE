@@ -12,8 +12,21 @@ router.get("/filter", async function(req, res, next) {
         console.log("******************************", req.query);
         let stringquery = req.query;
         //stringquery.split("'");
+        console.log(typeof stringquery.query);
         console.log(stringquery.query);
         const dbResult = await Games.find(stringquery.query);
+        res.send(dbResult);
+        //res.send("toto");
+    } catch (error) {
+        console.log(error)
+        next(error);
+    }
+});
+
+router.get("/games/load/:page", async function(req, res, next) {
+    try {
+        console.log("******************************", req.params.page);
+        const dbResult = await Games.find().limit(10).skip(10 * (req.params.page - 1));
         res.send(dbResult);
         //res.send("toto");
     } catch (error) {
