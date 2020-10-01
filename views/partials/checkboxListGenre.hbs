@@ -2,9 +2,14 @@
     <label for="favGenre">Favourite Genre </label>
     <div class="genre-div hidden">
         {{#each genre}}
-        <div>
-            <input type="checkbox" id="{{this}}" name="favGenre" value="{{this}}">
-            <label for="{{this}}">{{this}}</label>
+        <div class="chkbox-container">
+            <label for="{{this}}">
+                <input type="checkbox" id="{{this}}" name="favGenre" value="{{this}}">
+                <div class="checkbox-custom">
+                    <div class="circle"></div>
+                </div>
+                {{this}}
+            </label>
         </div>
         {{/each}}
     </div>
