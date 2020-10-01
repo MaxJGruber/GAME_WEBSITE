@@ -1,6 +1,7 @@
 :root {
   font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1920 - 320));
 }
+
 button,
 input {
   font: 1em Montserrat;
@@ -9,8 +10,10 @@ input {
 input {
   color: #171717;
 }
+
 .search-bar {
   display: flex;
+  background-color: rgb(93, 90, 87);
 }
 
 .search-bar input,
@@ -103,6 +106,11 @@ input {
   overflow: hidden;
   width: 1px;
   height: 1px;
+}
+
+.filter-section {
+  height: 5vh;
+  padding-top: 20px;
 }
 
 /* Active state */
