@@ -2,7 +2,7 @@ console.log("filter and scroll loaded");
 import APIHandler from "./apihandler.js";
 const apiFilter = new APIHandler();
 
-let htmlBody = document.getElementById("toto");
+let htmlBody = document.getElementById("games-view");
 const genreBox = document.querySelectorAll("input[name='favGenre']");
 const platformBox = document.querySelectorAll("input[name='favConsole']");
 const searchBar = document.querySelector(".input-search");
