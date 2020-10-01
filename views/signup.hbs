@@ -1,6 +1,6 @@
 <div class="form-container signup">
+    <form class="form " action="/signup" method="POST">
     <div class="signup-form"><h1>Sign Up</h1>
-    <form class="form" action="/signup" method="POST">
 
         <div class="eachInput">
         <label for="username">Name : </label>
@@ -22,10 +22,10 @@
         <input class="input" type="password" id="password" name="password" placeholder="•••••••"><br>
         </div>
 
-        <button>Create Account!</button>
+        <button class="signupBtn">Create Account!</button>
         <p>{{error}}</p>
-    </form><br>
-    <p>Already have an account ? <a href="/signin">Log In</a></p>
+    </form>
+    <p class="already">Already have an account ? <a href="/signin">Log In</a></p>
 
     <p class="terms">By Signing up, you agree to EKAM's <a href="#">Terms of Services</a> and <a href="#">Privacy Policy</a></p>
     </div>
