@@ -1,6 +1,7 @@
 :root {
   font-size: calc(16px + (24 - 16) * (100vw - 320px) / (1920 - 320));
 }
+
 button,
 input {
   font: 1em Montserrat;
@@ -9,8 +10,10 @@ input {
 input {
   color: #171717;
 }
+
 .search-bar {
   display: flex;
+  background-color: #BDC1C4;
 }
 
 .search-bar input,
@@ -103,6 +106,24 @@ input {
   overflow: hidden;
   width: 1px;
   height: 1px;
+}
+
+.filter-section {
+  height: 5vh;
+  padding: 10px 0;
+  background-color: #202020;
+}
+
+.checkbox-title {
+  border: 2px solid black;
+  padding: 0.8vh;
+  border-radius: 1em;
+  background-color: #E5B64A;
+}
+
+.checkbox-title:hover {
+  background-color: rgb(100, 98, 98);
+  color: white;
 }
 
 /* Active state */

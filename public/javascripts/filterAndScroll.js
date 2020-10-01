@@ -80,11 +80,11 @@ async function filterHandler() {
 function createGameDiv(game) {
     let div = document.createElement("div");
     div.classList.add("game-container");
-    div.innerHTML = `<a href="/games/collection/game/${game.id}">
+    div.innerHTML = `<a href="/games/collection/game/${game._id}">
         <h4 class="game-title">${game.title}</h4>
         <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
         <h5 class="genre">
-            ${game.genre}
+            ${game.genres}
         </h5>
         <h5 class="platforms">
             ${game.plateform}
@@ -96,8 +96,8 @@ function createGameDiv(game) {
             <a class="addToFinish" data-id="${game._id}"><i class="far fa-check-square"></i>  <span class="add">Add to Finished Games</span></a>
         </div>
         </a>`
-        htmlBody.appendChild(div);
-    
+    htmlBody.appendChild(div);
+
     // `<h4 class="game-title">${game.title}</h4>
     // <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
     // <h5 class="genre">${game.genres}</h5>

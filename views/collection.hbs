@@ -1,10 +1,9 @@
-
-    <div id="searchfield">
-        {{>searchBar}}
-    </div>
-    <div>
-        {{> filterBar}}
-    </div>
+<div id="searchfield">
+    {{>searchBar}}
+</div>
+<div class="filter-section">
+    {{> filterBar}}
+</div>
 <div class="games-display" id="games-view">
     {{#each games}}
     {{> game_item}}

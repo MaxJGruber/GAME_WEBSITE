@@ -9,12 +9,12 @@
     </p>
     <p class="intro-genre">Your Favorite genres are :
         {{#each user.favGenre}}
-        {{this}} game,
+        {{this}},
         {{/each}}</p>
     <h4>If it's not true, don't hesitate to update your information below</h4>
-</div>
-<div class="form-container">
-    <form class="form" action="/user/edit" method="POST" enctype="multipart/form-data">
-        {{> userForm}}
-    </form>
+    <div class="form-container">
+        <form class="form" action="/user/edit" method="POST" enctype="multipart/form-data">
+            {{> userForm}}
+        </form>
+    </div>
 </div>
