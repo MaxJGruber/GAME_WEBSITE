@@ -1,0 +1,17 @@
+.game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    margin: 1vw;
+}
+
+.add {
+    font-size: 1vw;
+}
+.platforms {
+    padding: 2vw;
+    width: 25vw;
+    font-size: 1.2vw;
+}
+.genre
