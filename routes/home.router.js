@@ -44,7 +44,7 @@ router.post("/signup", async (req, res, next) => {
       const hashedPassword = bcrypt.hashSync(newUser.password, salt);
       newUser.password = hashedPassword;
       const dbres = await UserModel.create(newUser);
-      res.redirect("/");
+      res.redirect("/signin");
     }
   } catch (err) {
     next(err);
