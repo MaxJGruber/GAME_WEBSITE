@@ -84,6 +84,8 @@ router.post("/signin", async(req, res, next) => {
                 res.redirect("/");
             }
         }
+    } catch(err) {
+      next(err)
     }
 });
 
