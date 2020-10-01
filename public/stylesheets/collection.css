@@ -5,75 +5,75 @@
 } */
 
 .games-display {
-  background-image: url("../images/tetris-signup.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  height: 90vh;
-  overflow: scroll;
-  width: 100%;
+    background-image: url("../images/tetris-signup.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    grid-gap: 10px;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    height: 90vh;
+    overflow: scroll;
+    width: 100%;
 }
 
 .game-container {
-  border: 3px solid black;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px;
+    border: 3px solid black;
+    border-radius: 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 5px;
 }
 
 .game-title {
-  color: black;
-  font-size: 0.7em;
-  text-align: center;
+    color: black;
+    font-size: 0.7em;
+    text-align: center;
 }
 
 img.game-poster {
-  height: auto;
-  width: 100px;
+    height: auto;
+    width: 100px;
 }
 
 .genre,
 .platforms {
-  color: grey;
-  font-size: 0.5em;
-  text-align: center;
+    color: grey;
+    font-size: 0.5em;
+    text-align: center;
 }
 
 .platform-chkbox,
 .genre-chkbox {
-  width: 45%;
-  text-align: center;
+    width: 45%;
+    text-align: center;
 }
 
 .platform-div,
 .genre-div {
-  position: absolute;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.8);
-  width: 45%;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  justify-content: center;
-  align-items: center;
-  padding-right: 0px;
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 0.8);
+    width: 45%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
 }
 
 .platform-div label,
 .genre-div label {
-  font-size: 1em;
-  text-align: center;
+    font-size: 1em;
+    text-align: center;
 }
 
 input[type="checkbox"] {
-  display: none;
+    display: none;
 }
 
 .checkbox-custom .circle {
@@ -82,7 +82,7 @@ input[type="checkbox"] {
     margin-left: 0;
     height: 100%;
     background: rgb(189, 0, 0);
-    transition: all 1s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
 input[type="checkbox"]+.checkbox-custom {
@@ -126,6 +126,7 @@ input[type="checkbox"]:checked+.checkbox-custom {
     background-color: #fff;
     transition: all 0.5s;
 }
+
 
 /* .chkbox-container {
     display: flex;
