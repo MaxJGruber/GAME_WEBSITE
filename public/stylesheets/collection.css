@@ -28,6 +28,11 @@
     padding: 5px;
 }
 
+.game-container:hover {
+    background-color: darkblue;
+    color: white;
+}
+
 .game-title {
     color: black;
     font-size: 0.7em;

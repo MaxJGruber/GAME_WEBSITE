@@ -13,7 +13,7 @@ input {
 
 .search-bar {
   display: flex;
-  background-color: rgb(93, 90, 87);
+  background-color: #BDC1C4;
 }
 
 .search-bar input,
@@ -110,7 +110,20 @@ input {
 
 .filter-section {
   height: 5vh;
-  padding-top: 20px;
+  padding: 10px 0;
+  background-color: #202020;
+}
+
+.checkbox-title {
+  border: 2px solid black;
+  padding: 0.8vh;
+  border-radius: 1em;
+  background-color: #E5B64A;
+}
+
+.checkbox-title:hover {
+  background-color: rgb(100, 98, 98);
+  color: white;
 }
 
 /* Active state */
