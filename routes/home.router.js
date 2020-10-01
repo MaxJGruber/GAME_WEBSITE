@@ -95,8 +95,4 @@ router.get("/signout", async (req, res, next) => {
   });
 });
 
-router.get("/about", async (req, res, next) => {
-  res.redirect("/");
-});
-
 module.exports = router;
