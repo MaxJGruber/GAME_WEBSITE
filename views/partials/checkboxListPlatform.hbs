@@ -4,8 +4,14 @@
     <div class="platform-div hidden">
         {{#each platform}}
         <div class="chkbox-container">
-            <input type="checkbox" id="{{this}}" name="favConsole" value="{{this}}">
-            <label for="{{this}}"><span>{{this}}</span></label>
+
+            <label for="{{this}}">
+                <input type="checkbox" id="{{this}}" name="favConsole" value="{{this}}">
+                <div class="checkbox-custom">
+                    <div class="circle"></div>
+                </div>
+                {{this}}
+            </label>
         </div>
         {{/each}}
     </div>
