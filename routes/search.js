@@ -3,7 +3,7 @@ var router = express.Router();
 const Games = require("../models/Game");
 const axios = require("axios");
 
-router.get("/search/game", async function (req, res, next) {
+router.get("//gasearchme", async function (req, res, next) {
   console.log("redirect");
   try {
     console.log(req.query);

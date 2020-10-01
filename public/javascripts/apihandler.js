@@ -48,5 +48,9 @@ class APIHandler {
     getGamePage(page) {
         return axios.get("/games/load/" + page);
     }
+
+    getFilterAndPAge(page, genre, plateforme, titre) {
+        return axios.get("/games/load-filter/" + page, { params: { genres: genre, platform: plateforme, title: titre } });
+    }
 }
 export default APIHandler;

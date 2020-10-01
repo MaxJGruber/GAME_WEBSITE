@@ -2,33 +2,15 @@
 <html>
 
 <head>
-  <title>EKAM Games</title>
-  {{#each stylesheets}}
-  <link rel="stylesheet" href="/stylesheets/{{this}}.css">
-  {{/each}}
-  <link rel='stylesheet' href='/stylesheets/style.css' />
-  <link rel='stylesheet' href='/stylesheets/navbar.css' />
-  <link rel="stylesheet" href="/stylesheets/form.css">
-  <link rel="stylesheet" href="/stylesheets/myCollection.css">
-  <link rel="stylesheet" href="/stylesheets/manageAccount.css">
-  <link rel="stylesheet" href="/stylesheets/signup.css">
 
-  <link rel="stylesheet" href="/stylesheets/home.css">
-  <link rel="stylesheet" href="/stylesheets/collection.css">
-  <link rel="stylesheet" href="/stylesheets/searchbar.css">
-  <link rel="stylesheet" href="/stylesheets/oneGame.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-  {{#each javascripts}}
-  <script src="/javascripts/{{this}}.js" type="module"></script>
-  {{/each}}
-  <script src="/javascripts/navbarCollapse.js" type="module"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/js/all.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  {{> meta_head}}
+
 </head>
 
 
 <body>
   {{> navBar}}
+
   {{{body}}}
 
   {{> footer}}

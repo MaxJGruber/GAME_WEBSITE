@@ -7,7 +7,7 @@ const platform = require("../models/platform");
 
 // GETTING ALL GAMES
 
-router.get("/filter", async function(req, res, next) {
+router.get("/games/load-filter/:page", async function(req, res, next) {
     try {
         console.log("******************************", req.query);
         let andQuery = [];
@@ -28,7 +28,6 @@ router.get("/filter", async function(req, res, next) {
             query.genres = { $in: req.query.genres }
             andQuery.push(query);
         }
-        //let finalquery = andQuery.length > 1 ? { $and: andQuery } : andQuery[0];
         let finalquery = {};
         if (andQuery.length > 1) {
             finalquery.$and = andQuery;
@@ -38,28 +37,9 @@ router.get("/filter", async function(req, res, next) {
 
         console.log("finalquery: ", finalquery);
 
-
-        // { 
-        //    $and :[ platform: [""],
-        //     title: ]
-        // }
-
-
-        const dbResult = await Games.find(finalquery);
+        const dbResult = await Games.find(finalquery).limit(10).skip(10 * (req.params.page - 1));
         res.send(dbResult);
-        //res.send("toto");
-    } catch (error) {
-        console.log(error)
-        next(error);
-    }
-});
 
-router.get("/games/load/:page", async function(req, res, next) {
-    try {
-        console.log("******************************", req.params.page);
-        const dbResult = await Games.find().limit(10).skip(10 * (req.params.page - 1));
-        res.send(dbResult);
-        //res.send("toto");
     } catch (error) {
         console.log(error)
         next(error);
@@ -77,14 +57,14 @@ router.get("/games/collection", async function(req, res, next) {
                 platform,
                 isLoggedIn: req.session.currentUser,
                 isAdmin: req.session.currentUser.role === "admin",
-                javascripts: ["searchbar", "filterBar", "infinitescroll", "myCollection"]
+                javascripts: ["searchbar", "filterAndScroll", "myCollection"]
             });
         } else {
             res.render("collection", {
                 games: dbResult,
                 genre,
                 platform,
-                javascripts: ["searchbar", "filterBar", "infinitescroll", "myCollection"],
+                javascripts: ["searchbar", "filterAndScroll", "myCollection"],
             });
         }
     } catch (error) {
