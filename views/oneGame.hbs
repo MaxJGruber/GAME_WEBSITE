@@ -7,8 +7,17 @@
     <div class="single-game">
         <img src="{{selectedGame.img}}" alt="{{selectedGame.title}}-poster" class="single-game-poster">
         <h4 class="single-game-title">{{selectedGame.title}}</h4>
-        <h5 class="single-genre">Genre: {{selectedGame.genres}} </h5>
-        <h5 class="single-platforms">Platforms: {{selectedGame.plateform}} </h5>
+        <h5 class="single-genre">Genre: 
+            
+            {{#each selectedGame.genres}}
+            {{this}} /
+            {{/each}}
+            
+             </h5>
+        <h5 class="single-platforms">Platforms: 
+            {{#each selectedGame.plateform}}
+            {{this}} /
+            {{/each}} </h5>
         {{{description}}}
         <div class="screeshot-grid">
             {{#each selectedGame.screenshots}}

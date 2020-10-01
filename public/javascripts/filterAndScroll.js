@@ -2,7 +2,7 @@ console.log("filter and scroll loaded");
 import APIHandler from "./apihandler.js";
 const apiFilter = new APIHandler();
 
-let htmlBody = document.getElementById("toto");
+let htmlBody = document.getElementById("games-view");
 const genreBox = document.querySelectorAll("input[name='favGenre']");
 const platformBox = document.querySelectorAll("input[name='favConsole']");
 const searchBar = document.querySelector(".input-search");
@@ -67,7 +67,7 @@ function createGameDiv(game) {
     div.classList.add("game-container");
     div.innerHTML = `<h4 class="game-title">${game.title}</h4>
     <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
-    <h5 class="genre">${game.genres}</h5>
+    <h5 class="genre">${game.genres.join()}</h5>
     <h5 class="platforms">${game.plateform}</h5>
     <a href="/games/collection/game/${game._id}">View details</a>
     <p class="addToCollec" data-id="${game._id}">Add to My Collection</p>`
