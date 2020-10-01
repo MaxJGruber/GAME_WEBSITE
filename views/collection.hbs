@@ -1,13 +1,12 @@
-<div id="searchfield">
-    {{>searchBar}}
-</div>
-<div class="horizontal-container">
+
+    <div id="searchfield">
+        {{>searchBar}}
+    </div>
     <div>
         {{> filterBar}}
     </div>
-    <div class="games-display" id="games-view">
-        {{#each games}}
-        {{> game_item}}
-        {{/each}}
-    </div>
+<div class="games-display" id="games-view">
+    {{#each games}}
+    {{> game_item}}
+    {{/each}}
 </div>

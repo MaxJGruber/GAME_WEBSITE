@@ -6,6 +6,21 @@ let htmlBody = document.getElementById("games-view");
 const genreBox = document.querySelectorAll("input[name='favGenre']");
 const platformBox = document.querySelectorAll("input[name='favConsole']");
 const searchBar = document.querySelector(".input-search");
+const platformChkbox = document.querySelector(".platform-chkbox");
+const genreChkbox = document.querySelector(".genre-chkbox");
+const platformDiv = document.querySelector(".platform-div");
+const genreDiv = document.querySelector(".genre-div");
+
+platformChkbox.onclick = platformHandler;
+genreChkbox.onclick = genreHandler;
+
+function platformHandler() {
+    platformDiv.classList.toggle("hidden");
+}
+
+function genreHandler() {
+    genreDiv.classList.toggle("hidden");
+}
 
 genreBox.forEach(box => box.onclick = clickHandler);
 platformBox.forEach(box => box.onclick = clickHandler);

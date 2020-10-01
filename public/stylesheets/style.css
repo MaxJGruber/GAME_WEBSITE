@@ -11,7 +11,7 @@ a {
 }
 
 footer {
-    background-color:  rgb(189, 0, 0);
+    background-color: rgb(189, 0, 0);
     color: antiquewhite;
     text-align: center;
     padding: 10px;
@@ -35,4 +35,8 @@ footer {
 
 .spaceevenly {
     justify-content: space-evenly;
+}
+
+.hidden {
+    display: none;
 }
