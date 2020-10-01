@@ -51,8 +51,6 @@ const gameSchema = new Schema({
             "PSP",
             "PS Vita",
             "Nintendo DS",
-            "Nintendo WII",
-            "Nintendo Switch",
             "macOS",
             "Linux",
             "Android",
