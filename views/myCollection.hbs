@@ -1,14 +1,14 @@
 <h1>Welcome to your Collection Page</h1>
 
 <h3>All Your Games</h3>
-
+<section class="center-table"></section>
 <table>
     <thead>
         <tr>
-            <th>Cover</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Platform</th>
+            <th><i class="far fa-images"></i> Cover</th>
+            <th><i class="fab fa-galactic-senate"></i> Title</th>
+            <th><i class="fas fa-dna"></i> Genre</th>
+            <th><i class="fas fa-gamepad"></i> Platform</th>
             <th>Remove from My Collection</th>
         </tr>
     </thead>
@@ -19,8 +19,14 @@
         <td><a href="/games/collection/game/{{this._id}}">
             {{this.title}}</a>
         </td>
-    <td>{{this.genres}}</td>
-    <td>{{this.plateform}}</td>
+    <td>{{#each this.genres}}
+        {{this}}, 
+        {{/each}}
+    </td>
+    <td>{{#each this.plateform}}
+        {{this}},  
+        {{/each}}
+    </td>
     <td><a class="del-owned" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a></td>
     </tr>
     {{/each}}
@@ -32,11 +38,11 @@
 <table>
     <thead>
         <tr>
-            <th>Cover</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Platform</th>
-            <th>Remove from My Collection</th>
+            <th class="collec-cover"><i class="far fa-images"></i> Cover</th>
+            <th class="collec-title"><i class="fab fa-galactic-senate"></i> Title</th>
+            <th class="collec-genre"><i class="fas fa-dna"></i> Genre</th>
+            <th class="collec-platform"><i class="fas fa-gamepad"></i> Platform</th>
+            <th class="collec-trash">Remove from My Collection</th>
         </tr>
     </thead>
     <tbody>
@@ -46,8 +52,12 @@
         <td><a href="/games/collection/game/{{this._id}}">
             {{this.title}}</a>
         </td>
-    <td>{{this.genres}} </td>
-    <td>{{this.plateform}} </td>
+    <td>{{#each this.genres}}
+        {{this}}, 
+        {{/each}}</td>
+    <td>{{#each this.plateform}}
+        {{this}},  
+        {{/each}}</td>
     <td><a class="del-finished" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a></td>
     </tr>
     {{/each}}
@@ -57,10 +67,10 @@
 <table>
     <thead>
         <tr>
-            <th>Cover</th>
-            <th>Title</th>
-            <th>Genre</th>
-            <th>Platform</th>
+            <th><i class="far fa-images"></i> Cover</th>
+            <th><i class="fab fa-galactic-senate"></i> Title</th>
+            <th><i class="fas fa-dna"></i> Genre</th>
+            <th><i class="fas fa-gamepad"></i> Platform</th>
             <th>Remove from My Collection</th>
         </tr>
     </thead>
@@ -71,8 +81,12 @@
         <td><a href="/games/collection/game/{{this._id}}">
             {{this.title}}</a>
         </td>
-    <td>{{this.genres}} </td>
-    <td>{{this.plateform}} </td>
+    <td>{{#each this.genres}}
+        {{this}}, 
+        {{/each}}</td>
+    <td>{{#each this.plateform}}
+        {{this}},  
+        {{/each}}</td>
     <td><a class="del-wish" data-id="{{this._id}}"><i class="far fa-trash-alt"></i></a></td>
     </tr>
     {{/each}}

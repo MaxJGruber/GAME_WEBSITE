@@ -1,6 +1,11 @@
 .tableImage {
     width: 10vw;
 }
+
+thead {
+    background-color: rgb(189, 0, 0);
+    color: whitesmoke;
+}
 table {
     /* display: flex; */
     width: 100%;
@@ -10,6 +15,8 @@ table {
     justify-content: center;
     /* border: 1px solid black; */
     border: 1px solid black;
+    margin-bottom: 10vh;
+    background-color: white;
 }
 th {
     border: 1px solid black;
@@ -19,3 +26,9 @@ td {
     border: 1px solid black;
     padding: 0.5vw 1vw;
 }
+tbody {
+    background-color: whitesmoke;
+}
+
+
+
