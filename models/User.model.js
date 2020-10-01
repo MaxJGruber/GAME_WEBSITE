@@ -59,8 +59,8 @@ const userSchema = new Schema({
       "https://www.kindpng.com/picc/m/105-1055561_gaming-logo-avatar-png-transparent-png.png",
   },
   wishlist: [{ type: Schema.Types.ObjectId, ref: "Games" }],
-  owned: [{ type: Schema.Types.ObjectId, ref: "Games" }],
-  finished: [{ type: Schema.Types.ObjectId, ref: "Games" }],
+  owned: [{ type: Schema.Types.ObjectId, ref: "Games"}],
+  finished: [{ type: Schema.Types.ObjectId, ref: "Games"}],
 });
 
 const UserModel = mongoose.model("User", userSchema);
