@@ -1,9 +1,11 @@
 <section class="genre-chkbox">
-      <label for="favGenre">Favourite Genre : </label>
-    {{#each genre}}
+    <label for="favGenre">Favourite Genre </label>
+    <div class="genre-div hidden">
+        {{#each genre}}
         <div>
             <input type="checkbox" id="{{this}}" name="favGenre" value="{{this}}">
             <label for="{{this}}">{{this}}</label>
         </div>
-    {{/each}}
+        {{/each}}
+    </div>
 </section>
