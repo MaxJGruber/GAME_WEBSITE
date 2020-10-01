@@ -29,12 +29,13 @@
   /* border: 2px solid black; */
   background-color: rgb(17, 0, 255);
   color: whitesmoke;
-  padding: 1vw 10vw;
-  border-radius: 10px;
+  font-size: 3vw;
+  padding: 1.5vw 10vw;
+  border-radius: 2vw;
   font-weight: bold;
 }
 .homeAnchor:hover {
-  background-color:  rgba(194, 194, 194, 0.8);
+  background-color: rgb(189, 0, 0);
   color: rgb(17, 0, 255);
 }
 
@@ -67,16 +68,18 @@
 }
 
 .aboutIt {
-  background: rgba(194, 194, 194, 0.445); 
+  background: rgba(194, 194, 194, 0.445);
   box-shadow: 2px 2px black;
+  padding: 2vw;
+  border-radius: 3vw;
 }
 
 .values-grid {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  text-align: center
-};
+  text-align: center;
+}
 
 div.values-container {
   display: flex;
@@ -87,7 +90,6 @@ div.values-container {
   margin: -2vw -4vw;
   padding: 5vw;
   border-radius: 0.3rem;
-
 }
 .value-title {
   color: rgb(14, 14, 14);
@@ -100,8 +102,9 @@ div.values-container {
 
 .value-explanation {
   color: black;
+  padding: 1vw;
   margin: 1vw;
-  background-color: rgba(194, 194, 194, 0.445); ;
+  background-color: rgba(194, 194, 194, 0.445);
   box-shadow: 2px 2px black;
-
+  border-radius: 2vw;
 }

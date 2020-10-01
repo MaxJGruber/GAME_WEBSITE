@@ -47,13 +47,25 @@
   height: auto;
 }
 
-iframe {
-  margin: 5%;
+.teaser {
+  margin: 5% 1%;
+  width: 95%;
+  height: auto;
 }
 
-p {
-  padding: 3%;
+.single-game p {
+  /* padding: 3%; */
   box-shadow: 1.2px 0.6px 1.5px darkblue;
   border-radius: 0.3rem;
   background-color: darkgray;
+}
+
+.option-btns {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.btn {
+  margin: 5% 12%;
 }

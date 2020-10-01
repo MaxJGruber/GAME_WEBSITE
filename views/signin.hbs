@@ -1,18 +1,19 @@
 <div class="form-container-signin">
-    <h1>Welcome to the log in page</h1>
 
-    <form class="form-signin" action="/signin" method="POST">
 
+    <form class="signup-form" action="/signin" method="POST">
+        <h1>Log In</h1>
         <label for="email">Email</label>
         <input type="email" name="email" id="email">
 
         <label for="password">Password</label>
         <input type="password" name="password" id="password">
         <div id="btn-container">
-            <button id="login-btn">Log In</button>
+            <button class="signInBtn">Log In</button>
         </div>
         <p>{{error}}</p>
+        <p>Don't have an account yet? <a href="/signup" class="sign-up-link">Go to the Sign up page! </a></p>
     </form>
 
-    <p>Don't have an account yet? <a href="/signup" class="sign-up-link">Go to the Sign up page! </a></p>
+
 </div>

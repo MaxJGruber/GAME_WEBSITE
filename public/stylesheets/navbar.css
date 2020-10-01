@@ -31,7 +31,7 @@
   display: none;
 }
 
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .topnav a:not(:first-child) {
     display: none;
   }
@@ -42,7 +42,7 @@
 }
 
 /* min or max width???  */
-@media screen and (max-width: 650px) {
+@media screen and (max-width: 750px) {
   .topnav.responsive {
     position: relative;
   }
