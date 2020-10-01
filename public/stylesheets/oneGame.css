@@ -51,7 +51,7 @@ iframe {
   margin: 5%;
 }
 
-p {
+.single-game p {
   padding: 3%;
   box-shadow: 1.2px 0.6px 1.5px darkblue;
   border-radius: 0.3rem;
