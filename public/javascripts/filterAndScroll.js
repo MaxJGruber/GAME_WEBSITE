@@ -65,11 +65,28 @@ async function filterHandler() {
 function createGameDiv(game) {
     let div = document.createElement("div");
     div.classList.add("game-container");
-    div.innerHTML = `<h4 class="game-title">${game.title}</h4>
-    <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
-    <h5 class="genre">${game.genres}</h5>
-    <h5 class="platforms">${game.plateform}</h5>
-    <a href="/games/collection/game/${game._id}">View details</a>
-    <p class="addToCollec" data-id="${game._id}">Add to My Collection</p>`
-    htmlBody.appendChild(div);
+    div.innerHTML = `<a href="/games/collection/game/${game.id}">
+        <h4 class="game-title">${game.title}</h4>
+        <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
+        <h5 class="genre">
+            ${game.genre}
+        </h5>
+        <h5 class="platforms">
+            ${game.plateform}
+        </h5>
+        <div class="add-btn">
+            <a class="addToCollec" data-id="${game._id}"><i class="far fa-plus-square"></i>  <span class="add">Add to Collection</span></a>
+        </div>
+        <div class="add-btn">
+            <a class="addToFinish" data-id="${game._id}"><i class="far fa-check-square"></i>  <span class="add">Add to Finished Games</span></a>
+        </div>
+        </a>`
+        htmlBody.appendChild(div);
+    
+    // `<h4 class="game-title">${game.title}</h4>
+    // <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
+    // <h5 class="genre">${game.genres}</h5>
+    // <h5 class="platforms">${game.plateform}</h5>
+    // <a href="/games/collection/game/${game._id}">View details</a>
+    // <p class="addToCollec" data-id="${game._id}">Add to My Collection</p>`
 }
