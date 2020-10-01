@@ -1,2 +1,11 @@
 /* LINK TO ALL CSS PAGES  */
-/* @import "./stylesheets/navbar.css"; */
+
+@import "/stylesheets/home.css";
+@import "/stylesheets/collection.css";
+@import "/stylesheets/manageAccount.css";
+@import "/stylesheets/myCollection.css";
+@import "/stylesheets/navbar.css";
+@import "/stylesheets/searchbar.css";
+@import "/stylesheets/style.css";
+@import "/stylesheets/style.css";
+@import "/stylesheets/signinPage.css";
