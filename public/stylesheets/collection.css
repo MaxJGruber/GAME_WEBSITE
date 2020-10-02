@@ -1,9 +1,3 @@
-/* .games-display {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    grid-gap: 10px;
-} */
-
 .games-display {
   background-image: url("../images/tetris-signup.jpg");
   background-position: center;
@@ -17,32 +11,6 @@
   width: 100%;
 }
 
-/* game-container {
-  border: 3px solid black;
-  border-radius: 10%;
-  
-  
-  background-color: rgba(255, 255, 255, 0.8);
-  
-   margin: auto;
-} */
-
-/* .game-container {
-  border: 3px solid black;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px;
-  margin: auto;
-} */
-
-/* .game-container .game-link * {
-  color: white;
-} */
-
 .game-alignment {
   display: flex;
   justify-content: center;
@@ -50,12 +18,23 @@
 
 .game-container:hover {
   background-color: darkblue;
-  color: white;
+  /* color: inherit !important; */
   animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
+.game-container:hover .game-link * {
+  /* background-color: darkblue; */
+  color: white;
+  /* animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
+}
+
+.game-container:hover .add-btn a {
+  /* background-color: darkblue; */
+  color: white;
+  /* animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both; */
+}
+
 .game-title {
-  color: black;
   font-size: 0.7em;
   text-align: center;
 }
@@ -67,7 +46,6 @@ img.game-poster {
 
 .genre,
 .platforms {
-  color: grey;
   font-size: 0.5em;
   text-align: center;
   margin: 5px auto;
