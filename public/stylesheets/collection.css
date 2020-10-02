@@ -27,10 +27,7 @@
    margin: auto;
 } */
 
-.game-container a {
-  color: white;
-}
-.game-container {
+/* .game-container {
   border: 3px solid black;
   border-radius: 10%;
   display: flex;
@@ -40,7 +37,11 @@
   background-color: rgba(255, 255, 255, 0.8);
   padding: 5px;
   margin: auto;
-}
+} */
+
+/* .game-container .game-link * {
+  color: white;
+} */
 
 .game-alignment {
   display: flex;
@@ -144,7 +145,7 @@ input[type="checkbox"]:checked + .checkbox-custom .circle {
 }
 
 input[type="checkbox"]:checked + .checkbox-custom {
-  background: dodgerblue;
+  background: rgb(197, 192, 192);
 }
 
 .checkbox-custom {
