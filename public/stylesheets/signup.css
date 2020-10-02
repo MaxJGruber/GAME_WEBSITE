@@ -10,7 +10,7 @@
   text-align: center;
   border-radius: 1rem;
   padding: 2vw;
-  margin: 3vw;
+  margin: 5% auto;
   background: whitesmoke;
   width: 50vw;
   color: black;
@@ -57,4 +57,12 @@
 }
 a {
   text-decoration: none;
+}
+
+.signup-form input {
+  width: 100%;
+}
+.form-container.signup {
+  display: flex;
+  justify-content: center;
 }

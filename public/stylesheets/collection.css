@@ -5,19 +5,16 @@
 } */
 
 .games-display {
-<<<<<<< HEAD
     background-image: url("../images/tetris-signup.jpg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: inline-grid;
+    display: grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     height: 90vh;
     overflow: scroll;
     width: 100%;
-    justify-content: center;
-    align-items: center;
 }
 
 .game-container {
@@ -30,109 +27,89 @@
     background-color: rgba(255, 255, 255, 0.8);
     padding: 5px;
     margin: auto;
-=======
-  background-image: url("../images/tetris-signup.jpg");
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  display: grid;
-  grid-gap: 10px;
-  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
-  height: 90vh;
-  overflow: scroll;
-  width: 100%;
-}
-
-.game-container {
-  border: 3px solid black;
-  border-radius: 10%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  background-color: rgba(255, 255, 255, 0.8);
-  padding: 5px;
-  margin: auto;
 }
 
 .game-alignment {
-  display: flex;
-  justify-content: center;
->>>>>>> 4e512bd49e7d15c179db23f9609cc81934461cf4
+    display: flex;
+    justify-content: center;
 }
 
 .game-container:hover {
-  background-color: darkblue;
-  color: white;
+    background-color: darkblue;
+    color: white;
+    animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) both;
 }
 
 .game-title {
-  color: black;
-  font-size: 0.7em;
-  text-align: center;
+    color: black;
+    font-size: 0.7em;
+    text-align: center;
 }
 
 img.game-poster {
-  height: auto;
-  width: 100px;
+    height: auto;
+    width: 100px;
 }
 
 .genre,
 .platforms {
-  color: grey;
-  font-size: 0.5em;
-  text-align: center;
+    color: grey;
+    font-size: 0.5em;
+    text-align: center;
 }
 
 .platform-chkbox,
 .genre-chkbox {
-  width: 45%;
-  text-align: center;
+    width: 45%;
+    text-align: center;
 }
 
 .platform-div,
 .genre-div {
-  position: absolute;
-  z-index: 1;
-  background: rgba(255, 255, 255, 0.8);
-  width: 45%;
-  display: grid;
-  grid-gap: 5px;
-  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-  justify-content: center;
-  align-items: center;
-  padding-right: 0px;
+    position: absolute;
+    z-index: 1;
+    background: rgba(255, 255, 255, 1);
+    width: 45%;
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    justify-content: center;
+    align-items: center;
+    padding-right: 0px;
+    animation: scale-in-top 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    border-radius: 1em;
 }
 
 .platform-div label,
 .genre-div label {
-  font-size: 1em;
-  text-align: center;
+    font-size: 1em;
+    text-align: center;
 }
 
 input[type="checkbox"] {
-  display: none;
+    display: none;
 }
 
 .checkbox-custom .circle {
-  width: 50%;
-  border-radius: 50%;
-  margin-left: 0;
-  height: 100%;
-  background: rgb(189, 0, 0);
-  transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+    width: 50%;
+    border-radius: 50%;
+    margin-left: 0;
+    height: 100%;
+    background: rgb(189, 0, 0);
+    transition: all 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 }
 
-input[type="checkbox"] + .checkbox-custom {
-  box-sizing: border-box;
-  width: 3rem;
-  height: 1.5rem;
-  border-radius: 1.5rem;
-  padding: 2px;
-  background-color: #c0ceda;
-  margin: 0 auto;
-  margin-top: 5px;
+input[type="checkbox"]+.checkbox-custom {
+    box-sizing: border-box;
+    width: 3rem;
+    height: 1.5rem;
+    border-radius: 1.5rem;
+    padding: 2px;
+    background-color: #c0ceda;
+    margin: 0 auto;
+    margin-top: 5px;
 }
+
 
 /* input[type="checkbox"]+label::before {
     box-sizing: border-box;
@@ -145,27 +122,27 @@ input[type="checkbox"] + .checkbox-custom {
     transition: all 0.5s;
 } */
 
-input[type="checkbox"]:checked + .checkbox-custom .circle {
-  margin-left: 50%;
+input[type="checkbox"]:checked+.checkbox-custom .circle {
+    margin-left: 50%;
 }
 
-input[type="checkbox"]:checked + .checkbox-custom {
-  background: dodgerblue;
+input[type="checkbox"]:checked+.checkbox-custom {
+    background: dodgerblue;
 }
 
 .checkbox-custom {
-  box-sizing: border-box;
-  display: block;
-  content: "";
-  height: calc(1.5rem - 4px);
-  width: calc(1.5rem - 4px);
-  border-radius: 50%;
-  background-color: #fff;
-  transition: all 0.5s;
+    box-sizing: border-box;
+    display: block;
+    content: "";
+    height: calc(1.5rem - 4px);
+    width: calc(1.5rem - 4px);
+    border-radius: 50%;
+    background-color: #fff;
+    transition: all 0.5s;
 }
 
 .fa-trash-alt:hover {
-  color: red;
+    color: red;
 }
 
 
@@ -176,3 +153,25 @@ input[type="checkbox"]:checked + .checkbox-custom {
     align-items: center;
     height: 40px;
 } */
+
+@keyframes scale-up-center {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.15);
+    }
+}
+
+@keyframes scale-in-top {
+    0% {
+        transform: scale(0);
+        transform-origin: 50% 0%;
+        opacity: 1;
+    }
+    100% {
+        transform: scale(1);
+        transform-origin: 50% 0%;
+        opacity: 1;
+    }
+}

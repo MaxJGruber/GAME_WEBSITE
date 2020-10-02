@@ -22,6 +22,8 @@ function genreHandler() {
     genreDiv.classList.toggle("hidden");
 }
 
+platformDiv.onclick = (e) => e.stopPropagation();
+
 genreBox.forEach(box => box.onclick = clickHandler);
 platformBox.forEach(box => box.onclick = clickHandler);
 searchBar.oninput = inputHandler;
