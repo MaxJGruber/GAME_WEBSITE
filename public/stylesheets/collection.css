@@ -9,12 +9,14 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    display: grid;
+    display: inline-grid;
     grid-gap: 10px;
     grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
     height: 90vh;
     overflow: scroll;
     width: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 .game-container {
@@ -26,6 +28,7 @@
     align-items: center;
     background-color: rgba(255, 255, 255, 0.8);
     padding: 5px;
+    margin: auto;
 }
 
 .game-container:hover {
@@ -135,6 +138,7 @@ input[type="checkbox"]:checked+.checkbox-custom {
 .fa-trash-alt:hover {
     color: red;
 }
+
 
 /* .chkbox-container {
     display: flex;

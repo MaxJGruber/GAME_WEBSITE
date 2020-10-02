@@ -82,12 +82,12 @@ function createGameDiv(game) {
     div.classList.add("game-container");
     div.innerHTML = `<a href="/games/collection/game/${game._id}">
         <h4 class="game-title">${game.title}</h4>
-        <img src="${game.img}" alt="${game.title}-poster" class="game-poster">
+        <img src="${game.img}" alt="${game.title}-poster" class="game-poster">        
         <h5 class="genre">
-            ${game.genres}
+            ${game.genres.join(" / ")}
         </h5>
         <h5 class="platforms">
-            ${game.plateform}
+            ${game.plateform.join(" / ")}
         </h5>
         <div class="add-btn">
             <a class="addToCollec" data-id="${game._id}"><i class="far fa-plus-square"></i>  <span class="add">Add to Collection</span></a>
