@@ -30,6 +30,17 @@
 .game-container a {
   color: white;
 }
+.game-container {
+  border: 3px solid black;
+  border-radius: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 5px;
+  margin: auto;
+}
 
 .game-alignment {
   display: flex;
@@ -39,6 +50,7 @@
 .game-container:hover {
   background-color: darkblue;
   color: white;
+  animation: scale-up-center 0.4s cubic-bezier(0.39, 0.575, 0.565, 1) both;
 }
 
 .game-title {
@@ -74,7 +86,7 @@ img.game-poster {
 .genre-div {
   position: absolute;
   z-index: 1;
-  background: rgba(255, 255, 255, 0.8);
+  background: rgba(255, 255, 255, 1);
   width: 45%;
   display: grid;
   grid-gap: 5px;
@@ -82,6 +94,8 @@ img.game-poster {
   justify-content: center;
   align-items: center;
   padding-right: 0px;
+  animation: scale-in-top 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94) both;
+  border-radius: 1em;
 }
 
 .platform-div label,
@@ -155,3 +169,25 @@ input[type="checkbox"]:checked + .checkbox-custom {
     align-items: center;
     height: 40px;
 } */
+
+@keyframes scale-up-center {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.15);
+  }
+}
+
+@keyframes scale-in-top {
+  0% {
+    transform: scale(0);
+    transform-origin: 50% 0%;
+    opacity: 1;
+  }
+  100% {
+    transform: scale(1);
+    transform-origin: 50% 0%;
+    opacity: 1;
+  }
+}
