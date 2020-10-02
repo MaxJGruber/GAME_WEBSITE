@@ -51,7 +51,7 @@
 
 .teaser {
   margin: 5% 1%;
-  width: 95%;
+  width: 40%;
   height: auto;
 }
 
@@ -85,7 +85,5 @@
   margin: 3px;
 }
 .btn:hover {
-  background-color:  rgba(55, 118, 255, 0.747);
+  background-color: rgba(55, 118, 255, 0.747);
 }
-
-

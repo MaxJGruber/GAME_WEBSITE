@@ -71,17 +71,17 @@ async function deleteFromWishlistList(evt) {
   // console.log("toto");
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromWishlist(gameId);
-  window.location = `http://localhost:3000/my-collection`;
+  window.location = window.location;
 }
 
 async function deleteFromFinishedList(evt) {
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromFinished(gameId);
-  window.location = `http://localhost:3000/my-collection`;
+  window.location = window.location;
 }
 
 async function deleteFromOwnedList(evt) {
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromOwned(gameId);
-  window.location = `http://localhost:3000/my-collection`;
+  window.location = window.location;
 }

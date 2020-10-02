@@ -10,9 +10,10 @@ searchBtn.onclick = inputHandler;
 
 async function inputHandler() {
   // setTimeout(, 500);
-  console.log("toto");
+  console.log(">>>>>>>", window.location);
   let searchValue = searchBar.value;
   const result = await apiFilter.getSelectedGame(searchValue);
   console.log(result.data);
-  window.location = `http://localhost:3000/games/collection/game/${result.data}`;
+  window.location = window.location.href + `/game/${result.data}`;
+  console.log(window.location);
 }
