@@ -1,65 +1,115 @@
 .profile {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
 }
 
+.background-account {
+  background-image: url("../images/Abstract_Background_with_Blue_Triangles.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.edit-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  border-radius: 1rem;
+  /* padding: 2vw; */
+  /* margin: 5% auto; */
+  background: rgb(147, 30, 226);
+  width: 95%;
+  color: black;
+}
 
 /* .greeting {
   text-align: center;
 } */
 
 .user-avatar {
-    width: 250px;
-    height: auto;
+  width: 250px;
+  height: auto;
+  border-radius: 2em;
 }
 
 .intro-genre,
 .intro-platform {
-    padding: 5px;
-    background-color: cornflowerblue;
+  padding: 5px;
+  background-color: cornflowerblue;
+  border-radius: 1em;
 }
 
 .indiv-form {
-    /* box-shadow: 1.2px 0.6px 1.5px darkblue;
+  /* box-shadow: 1.2px 0.6px 1.5px darkblue;
     border-radius: 0.3rem;
     margin: 10px; */
-    width: 45%;
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    /* justify-content: center;
+  width: 45%;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  /* justify-content: center;
     align-items: center;
     padding-right: 0px; */
 }
+.edit input {
+  margin: 5px;
+}
+
+#img.input {
+  width: 40%;
+}
+
+#edit-btn {
+  width: 15%;
+  background-color: rgb(17, 0, 255);
+  color: whitesmoke;
+  padding: 2% 0;
+  font-weight: bold;
+  margin: 10px;
+  border-radius: 1vw;
+  border: none;
+}
+
+#edit-btn:hover {
+  background-color: red;
+  color: rgb(17, 0, 255);
+  box-shadow: 10px 5px 5px rgb(17, 0, 255);
+}
+
+#edit-btn:focus {
+  background-color: green;
+  box-shadow: 10px 5px 5px rgb(17, 0, 255);
+}
 
 .form-container {
-    width: 100%;
-    text-align: center;
-    display: inline-block;
-    /* display: flex;
+  width: 100%;
+  text-align: center;
+  display: inline-block;
+  /* display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center; */
 }
 
 .forms {
-    display: flex;
-    justify-content: space-between;
-    /* justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
+  /* justify-content: space-between;
     flex-direction: row; */
 }
 
 .form {
-    width: 100%;
+  width: 100%;
 }
 
 .platform-div-user,
 .genre-div-user {
-    display: flex;
-    flex-direction: column;
-    /*z-index: 1;
+  display: flex;
+  flex-direction: column;
+  /*z-index: 1;
     background: rgba(255, 255, 255, 0.8);
     width: 100%;
     display: grid;
@@ -71,9 +121,9 @@
 }
 
 .chkbox-manage-account {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    justify-content: center;
-    align-items: center;
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  justify-content: center;
+  align-items: center;
 }

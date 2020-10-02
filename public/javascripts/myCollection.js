@@ -22,11 +22,13 @@ wishBtn.forEach((element) => {
 });
 
 async function addToWish(evt) {
+  evt.currentTarget.style["color"] = "green";
   const gameId = evt.currentTarget.getAttribute("data-id");
   const result = await apiFilter.addToWishlist(gameId);
 }
 
 async function addToCollectionList(evt) {
+  evt.currentTarget.style["color"] = "green";
   console.log("TAMAGOTCHI PAPY");
   // console.log(collecBtn.getAttribute("data-id"))
   // console.log(evt.target, evt.currentTarget)
@@ -36,6 +38,7 @@ async function addToCollectionList(evt) {
 }
 
 async function addToFinishList(evt) {
+  evt.currentTarget.style["color"] = "green";
   // console.log("TAMAGOTCHI PAPY");
   // console.log(collecBtn.getAttribute("data-id"))
   // console.log(evt.target, evt.currentTarget)

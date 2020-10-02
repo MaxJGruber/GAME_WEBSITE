@@ -29,12 +29,12 @@
 }
 
 .signupBtn {
-  width: 40%;
+  width: 60%;
   background-color: rgb(17, 0, 255);
   color: whitesmoke;
   padding: 0.5vw;
   font-weight: bold;
-  margin: 1vw;
+  margin: 0;
   border-radius: 1vw;
   border: none;
 }

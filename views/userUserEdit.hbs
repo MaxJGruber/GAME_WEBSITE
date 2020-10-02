@@ -1,20 +1,22 @@
-<div class="profile">
-    <h1 class="greeting">Hello {{user.username}} !</h1>
-    <img src="{{user.image}}" class="user-avatar" alt="{{user.name}} Image">
-    <h3>A.K.A {{user.pseudo}}</h3>
-    <p class="intro-platform">Your Favorite consoles are :
-        {{#each user.favConsole}}
-        The {{this}},
-        {{/each}}
-    </p>
-    <p class="intro-genre">Your Favorite genres are :
-        {{#each user.favGenre}}
-        {{this}},
-        {{/each}}</p>
-    <h4>If it's not true, don't hesitate to update your information below</h4>
-    <div class="form-container">
-        <form class="form" action="/user/edit" method="POST" enctype="multipart/form-data">
-            {{> userForm}}
-        </form>
+<div class="background-account">
+    <div class="profile">
+        <h1 class="greeting">Hello {{user.username}} !</h1>
+        <img src="{{user.image}}" class="user-avatar" alt="{{user.name}} Image">
+        <h3>A.K.A {{user.pseudo}}</h3>
+        <p class="intro-platform">Your Favorite consoles are :
+            {{#each user.favConsole}}
+            The {{this}},
+            {{/each}}
+        </p>
+        <p class="intro-genre">Your Favorite genres are :
+            {{#each user.favGenre}}
+            {{this}},
+            {{/each}}</p>
+        <h4>If it's not true, don't hesitate to update your information below</h4>
+        <div class="form-container edit-form">
+            <form class="form edit" action="/user/edit" method="POST" enctype="multipart/form-data">
+                {{> userForm}}
+            </form>
+        </div>
     </div>
 </div>
