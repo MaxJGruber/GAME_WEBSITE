@@ -29,6 +29,51 @@ genreBox.forEach((box) => (box.onclick = clickHandler));
 platformBox.forEach((box) => (box.onclick = clickHandler));
 searchBar.oninput = inputHandler;
 
+// -----------------------
+let collecBtn = document.querySelectorAll(".addToCollec");
+let finishBtn = document.querySelectorAll(".addToFinish");
+let wishBtn = document.querySelectorAll(".addToWish");
+
+// console.log("My collection loaded");
+
+collecBtn.forEach((button) => {
+  button.onclick = addToCollectionList;
+});
+
+finishBtn.forEach((button) => {
+  button.onclick = addToFinishList;
+});
+
+wishBtn.forEach((element) => {
+  element.onclick = addToWish;
+});
+
+async function addToWish(evt) {
+  evt.currentTarget.style["color"] = "green";
+  const gameId = evt.currentTarget.getAttribute("data-id");
+  const result = await apiFilter.addToWishlist(gameId);
+}
+
+async function addToCollectionList(evt) {
+  evt.currentTarget.style["color"] = "green";
+  console.log("TAMAGOTCHI PAPY");
+  // console.log(collecBtn.getAttribute("data-id"))
+  // console.log(evt.target, evt.currentTarget)
+  const gameId = evt.currentTarget.getAttribute("data-id");
+  console.log(gameId);
+  const res = await apiFilter.addToCollection(gameId);
+}
+
+async function addToFinishList(evt) {
+  evt.currentTarget.style["color"] = "green";
+  // console.log("TAMAGOTCHI PAPY");
+  // console.log(collecBtn.getAttribute("data-id"))
+  // console.log(evt.target, evt.currentTarget)
+  const gameId = evt.currentTarget.getAttribute("data-id");
+  // console.log(gameId)
+  const res = await apiFilter.addToFinish(gameId);
+}
+
 let page = 2;
 let typing;
 
@@ -83,6 +128,21 @@ async function filterHandler() {
   for (let game of gamesFiltered.data) {
     createGameDiv(game);
   }
+  collecBtn = document.querySelectorAll(".addToCollec");
+  finishBtn = document.querySelectorAll(".addToFinish");
+  wishBtn = document.querySelectorAll(".addToWish");
+
+  collecBtn.forEach((button) => {
+    button.onclick = addToCollectionList;
+  });
+
+  finishBtn.forEach((button) => {
+    button.onclick = addToFinishList;
+  });
+
+  wishBtn.forEach((element) => {
+    element.onclick = addToWish;
+  });
 }
 
 function createGameDiv(game) {
