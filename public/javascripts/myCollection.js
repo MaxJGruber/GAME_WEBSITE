@@ -65,7 +65,7 @@ deleteOwnedBtn.forEach((element) => {
 });
 
 async function deleteFromWishlistList(evt) {
-  console.log("toto");
+  // console.log("toto");
   const gameId = evt.currentTarget.getAttribute("data-id");
   const res = await apiFilter.deleteFromWishlist(gameId);
   window.location = `http://localhost:3000/my-collection`;
