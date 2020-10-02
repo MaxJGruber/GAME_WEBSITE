@@ -69,12 +69,23 @@
   justify-content: center;
   width: 50vw;
 }
+
 .add-list {
   color: black;
 }
+
 .btn {
   margin: 5% 12%;
   width: 100%;
   text-align: center;
   font-size: 12px;
+  border-radius: 5px;
+  padding: 3px;
+  background-color: rgba(55, 118, 255, 0.452);
+  margin: 3px;
 }
+.btn:hover {
+  background-color:  rgba(55, 118, 255, 0.747);
+}
+
+
