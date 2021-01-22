@@ -14,7 +14,7 @@ Can manage user accounts
 #Catalogue
 Full Catalogue of 350,000 games (more like  14,000 for now)
 
-EKAM GAME was created using MongoDB, Express.js and JavaScript , in 5 days, by me and 2 other classmates, as a second project for our 
+EKAM GAME was created using MongoDB, Express.js and JavaScript (using HandleBars) , in 5 days, by me and 2 other classmates, as a second project for our 
 Web Development Bootcamp at Ironhack Paris.
 
 Here is the link to my Portfolio!
